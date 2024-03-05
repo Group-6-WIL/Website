@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WIL-Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae23150f5c6ff7c50a17cdf7cdec1b9f8af7a192")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35ab658edc4fb07dcabb972d42bbcfe0f82b4550")]
 [assembly: System.Reflection.AssemblyProductAttribute("WIL-Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WIL-Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

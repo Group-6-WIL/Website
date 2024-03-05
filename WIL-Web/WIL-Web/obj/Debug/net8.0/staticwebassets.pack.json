@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\Images\\menu2 - white.png"
     },
     {
+      "Id": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\wwwroot\\Images\\phone_icon.png",
+      "PackagePath": "staticwebassets\\Images\\phone_icon.png"
+    },
+    {
       "Id": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
