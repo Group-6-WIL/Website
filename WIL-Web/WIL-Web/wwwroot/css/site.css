@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.header {
+    text-align: center; /* Center the content horizontally */
+}
+
+.centered-image {
+    display: inline-block; /* Ensure the image is treated as an inline-block element */
+    vertical-align: middle; /* Align the image vertically in the middle */
+}

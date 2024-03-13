@@ -4,6 +4,10 @@
 @{
     ViewData["Title"] = "Log in";
 }
+<h1 class="header">
+    <img src="~/images/ladybird-banner.png" class="centered-image" alt="Company Logo">
+</h1>
+
 
 <body style="background-color: #f8f9fa; position: relative; padding: 50px;">
     <div class="container">
@@ -13,43 +17,38 @@
                     <div class="card-header">
                         <h2 class="text-center">@ViewData["Title"]</h2>
                     </div>
-                    <div class="card-body">
+                    <div>
+                      
                         <form id="account" method="post">
                             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Enter your email">
+                                <h4>Email</h4>
+                                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="">
                                 <span asp-validation-for="Input.Email" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Enter your password">
+                                <h4>Passkey</h4>
+                                <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="">
                                 <span asp-validation-for="Input.Password" class="text-danger"></span>
-                            </div>
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" asp-for="Input.RememberMe" />
-                                <label class="form-check-label" for="rememberMe">Remember me</label>
                             </div>
                             <div class="form-group text-center">
                                 <button id="login-submit" type="submit" class="btn btn-primary btn-block">Log in</button>
                             </div>
                         </form>
                         <div class="text-center">
-                            <a asp-page="./ForgotPassword">Forgot your password?</a>
+                            <small class="text-muted">Not an admin?</small><br>
+                            <!-- Back button -->
+                                <a href="@Url.Action("Register", "Account")" class="text-info">Click here to register</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-     
-                            <!-- Back button -->
-                            <div class="text-center mt-3">
-            <a href="@Url.Action("Index", "Home")" type="submit" class="btn btn-primary">Back to Home</a>
-                            </div>
-                        </div>
-        
+    </div>
 </body>
+
+
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
