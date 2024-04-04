@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: Georgia, serif;
 }
 
 .header {
@@ -29,3 +30,44 @@ body {
     display: inline-block; /* Ensure the image is treated as an inline-block element */
     vertical-align: middle; /* Align the image vertically in the middle */
 }
+
+
+/* Define styles for your login button */
+.login-button {
+   margin-top: 30px; /* Add some margin to the top */
+    font-family: Georgia; /*font style*/
+    font-weight:bolder; /* Make the text bold */
+    width: 40%; /* Make the button full width */
+    height:10%; /* Make the button height auto */
+    background-color: green;
+    color: black; /* Optionally change text color to ensure visibility */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Add some border radius for better appearance */
+    font-size: 20px; /* Increase font size for better readability */
+    margin-bottom: 10px; /* Add some margin to the bottom */
+}
+
+    /* Optionally, add hover effect for better user experience */
+    .login-button:hover {
+        background-color: darkgreen;
+    }
+
+
+/* Optionally, you can specify font family for specific elements like headings and paragraphs */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+    
+}
+h2 {
+   
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+p {
+    font-family: Georgia, serif;
+}
+
+
