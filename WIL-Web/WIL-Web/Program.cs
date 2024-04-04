@@ -10,9 +10,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddRoles<IdentityRole>() // AddRoles here to register RoleManager
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = false; // Disable the requirement for confirmed accounts
+    // Additional options can be configured here
+})
+.AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews();
 
@@ -42,17 +46,16 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
-// Create Admin role and assign the default user to it
 using (var scope = app.Services.CreateScope())
 {
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
     // Ensure the "Admin" role exists, and create it if not
-    if (!roleManager.RoleExistsAsync("Admin").Result)
+    if (!await roleManager.RoleExistsAsync("Admin"))
     {
         IdentityRole adminRole = new IdentityRole("Admin");
-        IdentityResult result = roleManager.CreateAsync(adminRole).Result;
+        IdentityResult result = await roleManager.CreateAsync(adminRole);
 
         if (!result.Succeeded)
         {
@@ -61,16 +64,48 @@ using (var scope = app.Services.CreateScope())
         }
     }
 
-    // Assign the default user to the "Admin" role
-    IdentityUser defaultUser = userManager.FindByEmailAsync("admin1@gmail.com").Result;
-    if (defaultUser != null)
+    // Create the default admin user if it doesn't exist
+    var adminUser = await userManager.FindByEmailAsync("admin@admin.com");
+    if (adminUser == null)
     {
-        userManager.AddToRoleAsync(defaultUser, "Admin").Wait();
+        adminUser = new IdentityUser
+        {
+            UserName = "admin@admin.com",
+            Email = "admin@admin.com"
+        };
+
+        string adminPassword = "TheLadyBirdF0undation!";
+        var result = await userManager.CreateAsync(adminUser, adminPassword);
+
+        if (result.Succeeded)
+        {
+            Console.WriteLine("Admin user created successfully.");
+        }
+        else
+        {
+            Console.WriteLine("Error creating Admin user:");
+            foreach (var error in result.Errors)
+            {
+                Console.WriteLine(error.Description);
+            }
+        }
     }
     else
     {
-        Console.WriteLine("Default user not found.");
+        Console.WriteLine("Admin user already exists.");
+    }
+
+    // Assign the default user to the "Admin" role
+    if (!await userManager.IsInRoleAsync(adminUser, "Admin"))
+    {
+        await userManager.AddToRoleAsync(adminUser, "Admin");
+        Console.WriteLine("Admin user assigned to Admin role.");
+    }
+    else
+    {
+        Console.WriteLine("Admin user is already in Admin role.");
     }
 }
+
 
 app.Run();
