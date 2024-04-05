@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "abRo0DzHyICGkAAJaAyzQlyzdAyclxijFJiq3DjuD2qWczyIkitGwsZOsjQOpuhpBOgI61WwNfn/LLfkMThAoQ==",
+  "dgSpecHash": "s/MH+hMVYgz0mHEiXScLOsc/Yn4NQCQujIdzLkNWkwvUXcR7JyM4AUGAZNXGmuHwwH1X0e1zD73Kme7qE6mK7Q==",
   "success": true,
-  "projectFilePath": "E:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\github\\Group-6-Wil\\WIL-Web\\WIL-Web\\WIL-Web.csproj",
+  "projectFilePath": "E:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\#Github\\Group-6-Wil\\WIL-Web\\WIL-Web\\WIL-Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali Rees\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Ali Rees\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
