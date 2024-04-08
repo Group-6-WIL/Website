@@ -71,3 +71,19 @@ p {
 }
 
 
+/* Define styles for your login button */
+.register-button {
+    margin-top: 30px; /* Add some margin to the top */
+    font-family: Georgia; /*font style*/
+    font-weight: bolder; /* Make the text bold */
+    width: 40%; /* Make the button full width */
+    height: 50%; /* Make the button height auto */
+    background-color: green;
+    color: black; /* Optionally change text color to ensure visibility */
+    padding: 10px 10px; /* Adjust padding as needed */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Add some border radius for better appearance */
+    font-size: 30px; /* Increase font size for better readability */
+    margin-bottom: 30px; /* Add some margin to the bottom */
+
