@@ -1,29 +1,100 @@
 ﻿@model IEnumerable<WIL_Web.Models.ContactUs>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Contact Us";
 }
 
-<h1>Index</h1>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            position: relative;
+            color: white; /* Default text color */
+        }
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+            .header img.centered-image {
+                width: calc(2/3 * 100%);
+                /* Assuming you want to maintain aspect ratio */
+                height: auto;
+                margin-right: 10px; /* Space between image and icon */
+            }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            color: black; /* Text color for contact info */
+        }
+
+            .contact-info img {
+                width: 20px; /* Adjust the size of the icons */
+                height: auto;
+                margin-right: 5px; /* Space between icon and text */
+            }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            color: black; /* Text color for contact info */
+        }
+
+            .contact-info > div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px; /* Adjust spacing between contact info items */
+            }
+
+            .contact-info img {
+                width: 40px; /* Adjust the width of the images */
+                height: auto; /* Maintain aspect ratio */
+                margin-right: 10px; /* Space between icon and text */
+            }
+
+
+            .contact-info span {
+                font-size: 25px; /* Adjust the font size */
+            }
+
+    </style>
+    <script src="~/js/dynamictextcolor.js"></script>  <!-- Link to the JavaScript file -->
+</head>
+<body>
+    <h1 class="header">
+        <img src="~/images/ladybird-banner.png" class="centered-image" alt="Company Logo">
+        <div class="contact-info"/>
+            <div>
+                <img src="~/images/phone_iconfinder.png" />
+                <span>Michelle - 079 076 2234</span>
+            </div>
+            <div>
+                <img src="~/images/facebook_social_iconfinder.png" />
+                <span>The Ladybird Foundation</span>
+
+            </div>
+            <div>
+                <img src="~/images/mail_iconfinder.png" />
+                <span>shelby@polka.co.za</span>
+            </div>
+        </div>
+        
+    </h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="">
+                    <div class="">
+                        <h2 class="text-center">@ViewData["Title"]</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+                    
