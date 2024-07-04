@@ -1,0 +1,61 @@
+﻿@model WIL_v2_test.Models.DashboardViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .about-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-image {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+            .about-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    </style>
+</head>
+<body>
+    <div class="container about-section">
+        <div class="row">
+            <div class="col-12">
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>@Model.AboutUsContent</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="about-content">
+                    <h2>Our Mission</h2>
+                    <p>@Model.MissionContent</p>
+                </div>
+            </div>
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <div class="col-12 about-image">
+                    <img src="~/images/@Model.ImagePath" alt="About Us Image" class="img-fluid" />
+                </div>
+            }
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

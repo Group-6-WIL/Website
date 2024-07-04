@@ -727,3 +727,11 @@ E:\VARSITY COLLEGE\#YEAR 3\3.2\XBCAD7319 - WORK INTEGRATED LEARNING\Group-6-Wil-
 E:\VARSITY COLLEGE\#YEAR 3\3.2\XBCAD7319 - WORK INTEGRATED LEARNING\Group-6-Wil-main\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
 E:\VARSITY COLLEGE\#YEAR 3\3.2\XBCAD7319 - WORK INTEGRATED LEARNING\Group-6-Wil-main\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
 E:\VARSITY COLLEGE\#YEAR 3\3.2\XBCAD7319 - WORK INTEGRATED LEARNING\Group-6-Wil-main\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\ryanb\source\Group-6-Wil\WIL-Web\WIL-Web\bin\Debug\net8.0\Microsoft.JSInterop.dll

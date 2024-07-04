@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil-web\\wil-web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|solutionrelative:wil-web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil-web\\wil-web\\wwwroot\\images\\phone_icon.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|solutionrelative:wil-web\\wwwroot\\images\\phone_icon.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil-web\\wil-web\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|solutionrelative:wil-web\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil-web\\wil-web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|solutionrelative:wil-web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8B20D2B-45BE-4C8E-BE79-0AF733F6F663}|WIL-Web\\WIL-Web.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil-web\\wil-web\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -118,27 +118,22 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "phone_icon.png",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\wwwroot\\Images\\phone_icon.png",
               "RelativeDocumentMoniker": "WIL-Web\\wwwroot\\Images\\phone_icon.png",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\wwwroot\\Images\\phone_icon.png",
               "RelativeToolTip": "WIL-Web\\wwwroot\\Images\\phone_icon.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-03-05T09:03:02.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T09:03:02.08Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "WIL-Web\\Views\\Home\\Privacy.cshtml",
@@ -159,8 +154,7 @@
               "RelativeToolTip": "WIL-Web\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-05T06:52:41.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T06:52:41.686Z"
             },
             {
               "$type": "Document",
@@ -184,8 +178,7 @@
               "RelativeToolTip": "WIL-Web\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-05T06:49:49.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T06:49:49.3Z"
             },
             {
               "$type": "Document",
@@ -197,8 +190,7 @@
               "RelativeToolTip": "WIL-Web\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-05T06:49:44.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T06:49:44.516Z"
             },
             {
               "$type": "Document",
@@ -222,8 +214,7 @@
               "RelativeToolTip": "WIL-Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
               "ViewState": "AQIAAEEEAAAAAAAAAAAAAEgEAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-05T06:45:54.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T06:45:54.001Z"
             },
             {
               "$type": "Document",
@@ -247,8 +238,7 @@
               "RelativeToolTip": "WIL-Web\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-05T06:43:33.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T06:43:33.887Z"
             },
             {
               "$type": "Document",
@@ -296,8 +286,7 @@
               "RelativeToolTip": "WIL-Web\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T06:23:17.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T06:23:17.165Z"
             },
             {
               "$type": "Document",
@@ -309,8 +298,7 @@
               "RelativeToolTip": "WIL-Web\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-05T06:22:57.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T06:22:57.677Z"
             },
             {
               "$type": "Document",
@@ -322,8 +310,7 @@
               "RelativeToolTip": "WIL-Web\\Views\\_ViewStart.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T15:29:07.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T15:29:07.006Z"
             },
             {
               "$type": "Document",
@@ -374,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "WIL-Web\\Views\\Shared\\_LoginPartial.cshtml",
@@ -382,8 +369,7 @@
               "RelativeToolTip": "WIL-Web\\Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T14:32:36.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T14:32:36.099Z"
             },
             {
               "$type": "Document",
@@ -410,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WIL-Web\\Views\\Home\\Index.cshtml",
@@ -418,12 +404,11 @@
               "RelativeToolTip": "WIL-Web\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAA8AAAAAAAAAAAAswA8AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T13:21:14.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T13:21:14.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL-Web\\WIL-Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WIL-Web\\Views\\Shared\\_Layout.cshtml",
@@ -431,8 +416,7 @@
               "RelativeToolTip": "WIL-Web\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAACoAAAAAAAAAAAAQwC0AAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-04T13:21:10.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T13:21:10.864Z"
             }
           ]
         }

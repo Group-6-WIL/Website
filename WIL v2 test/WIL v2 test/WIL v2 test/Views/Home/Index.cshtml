@@ -1,0 +1,45 @@
+﻿@{
+ViewData["Title"] = "Home Page";
+}
+<body style="background-color: #e03c31; position: relative;">
+    <div class="d-flex justify-content-center align-items-center">
+        <img src="~/images/ladybirdlogo-final.png" alt="LadyBirdLogo.png">
+
+    </div>
+    <div class="text-center">
+        <h8 class="display-4" style="color:white; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">LADY</h8>
+        <h8 class="display-4" style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">BIRD</h8>
+        <br>
+        <h16 class="display-4" style="color:black; font-family:Candara; font-weight:bold; font-size:xx-large;">FOUNDATION</h16>,
+        <br>
+        <h20 class="display-4" style="color:white; font-family:Candara">Raising Funds to Enhance the Lives of Others</h20>
+    </div>
+    <div class="ladybug-pattern">
+        <div class="dot" style="top: 1%; left: 1%;"></div> @* top left *@
+        <div class="dot" style="top:5%; left: 90%;"></div> @* top right *@
+        <div class="dot" style="top: 30%; left: 25%;"></div> @* one by lady *@
+        <div class="dot" style="top: 10%; left: 55%;"></div> @*one buy ladybug pic*@
+        <div class="dot" style="top: 80%; left: 75%;"></div> @*bottom right*@
+        <div class="dot" style="top: 90%; left: 10%;"></div> @*bottom left*@
+    </div>
+</body>
+<style>
+    .ladybug-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        transform: rotate(5deg);
+    }
+
+    .dot {
+        position: absolute;
+        width: 300px; /* Adjust the size of the dots */
+        height: 300px; /* Adjust the size of the dots */
+        background-color: #000;
+        border-radius: 50%;
+    }
+</style>
