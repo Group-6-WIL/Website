@@ -48,6 +48,31 @@
         font-weight: bold;
         color: #333;
     }
+
+    .image-preview {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+        .image-preview img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-preview .remove-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 0 5px;
+        }
 </style>
 
 <div class="container">
@@ -61,7 +86,7 @@
                     <h4>Upcoming Events</h4>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="/Dashboard/AddEvent" enctype="multipart/form-data">
+                    <form id="eventForm" method="post" action="/Dashboard/AddEvent" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="eventName">Event Name</label>
                             <input type="text" class="form-control" id="eventName" name="eventName" required>
@@ -75,8 +100,9 @@
                             <textarea class="form-control" id="eventDescription" name="eventDescription" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="eventImage">Event Image</label>
-                            <input type="file" class="form-control-file" id="eventImage" name="eventImage" required>
+                            <label for="eventImage">Event Images</label>
+                            <input type="file" class="form-control-file" id="eventImage" name="eventImage" accept="image/*" multiple required>
+                            <div id="imagePreviewContainer" class="mt-2"></div>
                         </div>
                         <button type="submit" class="btn btn-primary">Add Event</button>
                     </form>
@@ -109,8 +135,7 @@
                 </div>
             </div>
         </div>
-
-
+    </div>
 
     <div class="row">
         <!-- Donation Counter Section -->
@@ -180,3 +205,64 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const eventImageInput = document.getElementById('eventImage');
+        const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+
+        eventImageInput.addEventListener('change', function (event) {
+            const files = event.target.files;
+            imagePreviewContainer.innerHTML = '';
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const imagePreview = document.createElement('div');
+                    imagePreview.classList.add('image-preview');
+
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = file.name;
+
+                    const removeButton = document.createElement('span');
+                    removeButton.textContent = 'x';
+                    removeButton.classList.add('remove-image');
+
+                    removeButton.addEventListener('click', function () {
+                        imagePreviewContainer.removeChild(imagePreview);
+                        updateFileCount();
+                    });
+
+                    imagePreview.appendChild(img);
+                    imagePreview.appendChild(removeButton);
+                    imagePreviewContainer.appendChild(imagePreview);
+                    updateFileCount();
+                };
+
+                reader.readAsDataURL(file);
+            }
+
+            function updateFileCount() {
+                const previewItems = imagePreviewContainer.querySelectorAll('.image-preview');
+                const fileCount = previewItems.length;
+                console.log("Files Count: " + fileCount);
+            }
+        });
+        Preview.addEventListener('click', function (event) {
+            if (event.target.classList.contains('remove-image')) {
+                const imagePreview = event.target.parentNode;
+                imagePreviewContainer.removeChild(imagePreview);
+                updateFileCount();
+            }
+        });
+
+        function updateFileCount() {
+            const previewItems = imagePreviewContainer.querySelectorAll('.image-preview');
+            const fileCount = previewItems.length;
+            console.log("Files Count: " + fileCount);
+        }
+    });
+</script>
