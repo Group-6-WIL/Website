@@ -13,17 +13,17 @@
                 <!-- Main menu items -->
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white; font-size:large; font-weight: bold">
-                            <img src="~/images/menu2 - white.png" alt="Menu Icon" style="width: 35px; height: 35px; margin-right: 5px;" />
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white; font-size:large; font-weight: bold"
+                           data-white-icon="@(Url.Content("~/images/menu2 - white.png"))"
+                           data-black-icon="@(Url.Content("~/images/menu2 - black.png"))">
+                            <img id="menuIcon" src="~/images/menu2 - white.png" alt="Menu Icon" style="width: 35px; height: 35px; margin-right: 5px;" />
                             Menu
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background:white">
-                            <a class="dropdown-item" href=" @Url.Action("Index", "Home")" style="color:black">Home</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "Home")" style="color:black">Home</a>
                             <a class="dropdown-item" href="Events" style="color:black">Events</a>
                             <a class="dropdown-item" href="AboutUs" style="color:black">About Us</a>
-                            <a class="dropdown-item" id="donationLink" href="Donations" style="color:black">
-                                Donations
-                            </a>
+                            <a class="dropdown-item" id="donationLink" href="Donations" style="color:black">Donations</a>
 
                             <script>
                                 // Check if the user is authenticated using JavaScript
@@ -41,12 +41,11 @@
                             </script>
                             <a class="dropdown-item" href="Locations" style="color:black">Location</a>
                             <a class="dropdown-item" href="ContactUs" style="color:black">Contact Us</a>
-
                             @* IF USER= ADMIN *@
                             @* @if (User.IsInRole("Admin"))
                             { *@
-                                <!-- Only show the "Admin Dashboard" link if the user is in the "Admin" role -->
-                                <a class="dropdown-item" asp-controller="Dashboard" style="color:black">Dashboard</a>
+                            <!-- Only show the "Admin Dashboard" link if the user is in the "Admin" role -->
+                            <a class="dropdown-item" asp-controller="Dashboard" style="color:black">Dashboard</a>
                             @* } *@
                         </div>
                     </li>
@@ -75,6 +74,37 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script to change menu icon and text color based on page -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentPath = window.location.pathname;
+            var menuLink = document.getElementById("navbarDropdown");
+            var menuIcon = document.getElementById("menuIcon");
+
+            if (currentPath !== '/' && currentPath !== '/Home/Index') {
+                menuLink.style.color = "black";
+                menuIcon.src = menuLink.getAttribute("data-black-icon");
+            } else {
+                menuLink.style.color = "white";
+                menuIcon.src = menuLink.getAttribute("data-white-icon");
+            }
+
+            // Change the color of the register and login links
+            var registerLink = document.getElementById("registerLink");
+            var loginLink = document.getElementById("loginLink");
+
+            if (registerLink && loginLink) {
+                if (currentPath !== '/' && currentPath !== '/Home/Index') {
+                    registerLink.style.color = registerLink.getAttribute("data-dark-color");
+                    loginLink.style.color = loginLink.getAttribute("data-dark-color");
+                } else {
+                    registerLink.style.color = registerLink.getAttribute("data-light-color");
+                    loginLink.style.color = loginLink.getAttribute("data-light-color");
+                }
+            }
+        });
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
