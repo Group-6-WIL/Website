@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|c:\\users\\ryanb\\source\\group-6-wil\\wil v2 test\\wil v2 test\\wil v2 test\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -66,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,57 +86,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "WIL v2 test\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "WIL v2 test\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAAwHkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-09T13:39:08.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T13:36:29.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Views\\Dashboard\\Index.cshtml",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Dashboard\\Index.cshtml",
               "RelativeToolTip": "WIL v2 test\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AQIAAPIAAAAAAAAAAAAqwAcBAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-07T12:28:50.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeToolTip": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAAQAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-07T12:25:48.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "menu2 - white.png",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\Images\\menu2 - white.png",
               "RelativeDocumentMoniker": "WIL v2 test\\wwwroot\\Images\\menu2 - white.png",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\Images\\menu2 - white.png",
               "RelativeToolTip": "WIL v2 test\\wwwroot\\Images\\menu2 - white.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-07-07T11:56:56.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T11:56:56.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "menu2 - black.png",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\Images\\menu2 - black.png",
               "RelativeDocumentMoniker": "WIL v2 test\\wwwroot\\Images\\menu2 - black.png",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\Images\\menu2 - black.png",
               "RelativeToolTip": "WIL v2 test\\wwwroot\\Images\\menu2 - black.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-07-07T11:56:53.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T11:56:53.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Views\\Shared\\Error.cshtml",
@@ -136,12 +168,11 @@
               "RelativeToolTip": "WIL v2 test\\Views\\Shared\\Error.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T11:55:33.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T11:55:33.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -149,12 +180,11 @@
               "RelativeToolTip": "WIL v2 test\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T11:55:32.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T11:55:32.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Views\\Shared\\_LoginPartial.cshtml",
@@ -167,46 +197,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WIL v2 test\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAmwC0AAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAADwvyUAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-07T11:51:20.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WIL v2 test\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAG8AAAAAAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAYwHAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-04T14:34:50.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeToolTip": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-04T14:32:29.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "20240704135322_First.cs",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Data\\Migrations\\20240704135322_First.cs",
               "RelativeDocumentMoniker": "WIL v2 test\\Data\\Migrations\\20240704135322_First.cs",
@@ -218,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\appsettings.json",
               "RelativeDocumentMoniker": "WIL v2 test\\appsettings.json",
@@ -230,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Program.cs",
               "RelativeDocumentMoniker": "WIL v2 test\\Program.cs",
@@ -238,12 +268,11 @@
               "RelativeToolTip": "WIL v2 test\\Program.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAAUwE0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T13:45:07.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T13:45:07.557Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ryanb\\source\\Group-6-Wil\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "WIL v2 test\\Data\\ApplicationDbContext.cs",

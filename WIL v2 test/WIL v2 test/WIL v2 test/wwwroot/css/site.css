@@ -1,45 +1,121 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
-}
-
-body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: Georgia, serif;
+}
+
+header, main {
+    flex: 1;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     text-align: center;
     background: black;
     color: white;
     font-weight: bold;
-    visibility: visible;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a slight shadow to the footer */
 }
 
     .footer .container {
         padding: 10px;
     }
 
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
 
+.header {
+    text-align: center;
+}
+
+.centered-image {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Define styles for your login button */
+.login-button {
+    margin-top: 30px;
+    font-family: Georgia;
+    font-weight: bolder;
+    width: 40%;
+    height: 10%;
+    background-color: green;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+    .login-button:hover {
+        background-color: darkgreen;
+    }
+
+/* Define styles for your register button */
+.register-button {
+    margin-top: 30px;
+    font-family: Georgia;
+    font-weight: bolder;
+    width: 40%;
+    height: 50%;
+    background-color: green;
+    color: black;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+p {
+    font-family: Georgia, serif;
+}
+
+.ladybug-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    transform: rotate(5deg);
+}
+
+.dot {
+    position: absolute;
+    width: 300px; /* Adjust the size of the dots */
+    height: 300px; /* Adjust the size of the dots */
+    background-color: #000;
+    border-radius: 50%;
+}

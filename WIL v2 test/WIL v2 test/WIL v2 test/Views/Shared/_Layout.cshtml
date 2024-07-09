@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WIL_V1.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Ladybird Foundation</title>
 </head>
 <body>
     <header>
@@ -106,6 +107,6 @@
         });
     </script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
