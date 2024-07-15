@@ -1,0 +1,115 @@
+﻿@model WIL_v2_test.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container">
+    <h1 class="text-center">Contact Us</h1>
+
+    <div class="card">
+        <div class="card-header bg-secondary text-white">
+            <h4>Contact Us</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" action="/Contact/EditContact" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="teamMember">Team Member</label>
+                    <input type="text" class="form-control" id="teamMember" name="teamMember" value="@Model.TeamMember" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" value="@Model.Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" name="phone" value="@Model.Phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="teamMemberImage">Team Member Image</label>
+                    <input type="file" class="form-control-file" id="teamMemberImage" name="teamMemberImage">
+                    @if (!string.IsNullOrEmpty(Model.ContactUsImagePath))
+                    {
+                        <div>
+                            <img src="@Url.Content("~/team/" + Model.ContactUsImagePath)" alt="Team Member Image" width="150" height="150">
+                        </div>
+                    }
+                </div>
+                <button type="submit" class="btn btn-secondary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .card-header {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: 15px;
+    }
+
+    .card-body {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 20px;
+    }
+
+    .btn {
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+
+    .form-control,
+    .form-control-file {
+        border-radius: 10px;
+    }
+
+    .text-center {
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .image-preview {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+        .image-preview img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-preview .remove-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 0 5px;
+        }
+</style>

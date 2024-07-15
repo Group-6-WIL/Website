@@ -1,0 +1,50 @@
+﻿@model List<WIL_v2_test.Models.Donation>
+
+@{
+    ViewData["Title"] = "Donation Page";
+}
+
+<h1 class="text-center">Donation Page</h1>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Donation List</h4>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var donation in Model)
+                    {
+                        <tr>
+                            <td>@donation.Id</td>
+                            <td>@donation.Amount.ToString("C")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header bg-success text-white">
+            <h4>Make a Donation</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" action="/Donation/AddDonation">
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
+                </div>
+                <button type="submit" class="btn btn-success">Donate</button>
+            </form>
+        </div>
+    </div>
+</div>
+

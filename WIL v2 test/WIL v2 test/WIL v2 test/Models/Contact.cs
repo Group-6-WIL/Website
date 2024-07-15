@@ -7,6 +7,6 @@
         public string Email { get; set; }
         public string Phone { get; set; }
 
-        public string ImagePath { get; set; } // Add this property
+        public string ImagePath { get; set; } // Add this propertyy
     }
 }
