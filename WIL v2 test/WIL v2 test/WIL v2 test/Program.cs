@@ -45,6 +45,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+
+
 app.MapRazorPages();
 
 // Create Admin role and assign the default user to it

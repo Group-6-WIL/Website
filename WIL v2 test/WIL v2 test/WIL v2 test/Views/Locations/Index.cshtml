@@ -1,1 +1,147 @@
-﻿
+﻿@model IEnumerable<WIL_v2_test.Models.Location>
+
+@{
+    ViewData["Title"] = "Locations";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Ladybird Foundation</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WIL_V1.styles.css" asp-append-version="true" />
+    <style>
+        .location-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .location-header {
+            background-color: #d9534f;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+            height: 150px; /* Adjusted height */
+        }
+
+        .circle {
+            position: absolute;
+            background: black;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .circle1 {
+            width: 80px;
+            height: 80px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .circle2 {
+            width: 100px;
+            height: 100px;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .circle3 {
+            width: 60px;
+            height: 60px;
+            top: 30px;
+            right: 30%;
+        }
+
+        .circle4 {
+            width: 120px;
+            height: 120px;
+            bottom: 30px;
+            left: 25%;
+        }
+
+        .location-map {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .location-table {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="location-page">
+        <div class="location-header">
+            <h1 class="header-text">@ViewData["Title"]</h1>
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+        </div>
+
+        <div class="location-map">
+            <h3>Donation Sites</h3>
+            <p>Kloof Village Mall</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.848474559566!2d-74.00601518459325!3d40.71277597933132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316c7e3b99%3A0x0e3b45a7!2sKloof%20Village%20Mall!5e0!3m2!1sen!2sza!4v1628862137153!5m2!1sen!2sza"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="location-table">
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create New Location</a>
+            </p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                <!-- You can add edit/delete actions here if needed -->
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
