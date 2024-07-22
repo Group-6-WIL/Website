@@ -43,12 +43,12 @@
                             <a class="dropdown-item" href="Locations" style="color:black">Location</a>
 
                             <a class="dropdown-item" href="Contact" style="color:black">Contact Us</a>
-                            @* IF USER= ADMIN *@
-                            @* @if (User.IsInRole("Admin"))
-                            { *@
+                            @*IF USER= ADMIN *@
+                            @if (User.IsInRole("Admin"))
+                            { 
                             <!-- Only show the "Admin Dashboard" link if the user is in the "Admin" role -->
                             <a class="dropdown-item" asp-controller="Dashboard" style="color:black">Dashboard</a>
-                            @* } *@
+                             }
                         </div>
                     </li>
                 </ul>
