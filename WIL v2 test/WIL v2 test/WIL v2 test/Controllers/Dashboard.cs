@@ -1,41 +1,51 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using WIL_v2_test.Data;
 using WIL_v2_test.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace WIL_v2_test.Controllers
 {
-    public class Dashboard : Controller
+    public class DashboardController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _hostingEnvironment;
+        private readonly ILogger<DashboardController> _logger;
 
-        public Dashboard(ApplicationDbContext context, IWebHostEnvironment hostingEnvironment)
+        public DashboardController(ApplicationDbContext context, IWebHostEnvironment hostingEnvironment, ILogger<DashboardController> logger)
         {
             _context = context;
             _hostingEnvironment = hostingEnvironment;
+            _logger = logger;
         }
 
         public IActionResult Index()
         {
-            
-                var aboutUs = _context.AboutUs.FirstOrDefault();
-                var model = new DashboardViewModel
-                {
-                    AboutUsContent = aboutUs?.Content ?? "Default About Us content",
-                    MissionContent = aboutUs?.Mission ?? "Default Mission content",
-                    ImagePath = aboutUs?.ImagePath, // Include this if you have an image path in the database
-                    TotalDonations = _context.Donations.Sum(d => d.Amount)
-                };
-                return View(model);
-            }
+            var aboutUs = _context.AboutUs.FirstOrDefault();
+            var model = new DashboardViewModel
+            {
+                AboutUsContent = aboutUs?.Content ?? "Default About Us content",
+                MissionContent = aboutUs?.Mission ?? "Default Mission content",
+                ImagePath = aboutUs?.ImagePath, // Include this if you have an image path in the database
+                TotalDonations = _context.Donations.Sum(d => d.Amount),
+                Events = _context.Events.ToList(),
+                 TeamContacts = _context.TeamContacts.ToList() // Add this line
+            };
+            return View(model);
+        }
 
-        
         [HttpPost]
         public IActionResult AddEvent(string eventName, DateTime eventDate, string eventDescription, IFormFile eventImage)
         {
             string uniqueFileName = ProcessUploadedFile(eventImage, "events");
 
-            var newEvent = new Models.Events
+            var newEvent = new Events
             {
                 Name = eventName,
                 Date = eventDate,
@@ -47,6 +57,7 @@ namespace WIL_v2_test.Controllers
 
             return RedirectToAction("Index");
         }
+
 
         [HttpPost]
         public IActionResult EditAboutUs(string aboutUsContent, string missionContent, IFormFile aboutUsImage)
@@ -83,6 +94,9 @@ namespace WIL_v2_test.Controllers
             return RedirectToAction("Index");
         }
 
+
+
+
         [HttpPost]
         public IActionResult EditContact(string teamMember, string email, string phone, IFormFile teamMemberImage)
         {
@@ -110,31 +124,63 @@ namespace WIL_v2_test.Controllers
             return RedirectToAction("Index");
         }
 
-        private string ProcessUploadedFile(IFormFile file, string folderName)
+        [HttpPost]
+        public IActionResult DeleteEvent(int id)
         {
-            string uniqueFileName = null;
-
-            if (file != null)
+            var eventToDelete = _context.Events.Find(id);
+            if (eventToDelete == null)
             {
-                string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, folderName);
-
-                // Check if the directory exists, if not, create it
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
-
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    file.CopyTo(fileStream);
-                }
+                _logger.LogError($"Event with id {id} not found.");
+                return NotFound();
             }
 
-            return uniqueFileName;
+            _context.Events.Remove(eventToDelete);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
+
+
+        public IActionResult EventDetails(int id)
+        {
+            var eventDetails = _context.Events.Find(id);
+            if (eventDetails == null)
+            {
+                _logger.LogError($"Event with id {id} not found.");
+                return NotFound();
+            }
+
+            return View(eventDetails); // This should map to /Views/Dashboard/EventDetails.cshtml
+        }
+
+        //***
+
+
+
+
+       private string ProcessUploadedFile(IFormFile file, string folderName)
+{
+    string uniqueFileName = null;
+
+    if (file != null)
+    {
+        string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, folderName);
+        if (!Directory.Exists(uploadsFolder))
+        {
+            Directory.CreateDirectory(uploadsFolder);
+        }
+
+        uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+        string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        {
+            file.CopyTo(fileStream);
+        }
+    }
+
+    return uniqueFileName;
+}
 
     }
 }

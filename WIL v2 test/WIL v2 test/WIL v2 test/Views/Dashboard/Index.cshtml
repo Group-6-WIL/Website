@@ -80,37 +80,64 @@
 
     <div class="row">
         <!-- Upcoming Events Section -->
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h4>Upcoming Events</h4>
-                </div>
-                <div class="card-body">
-                    <form id="eventForm" method="post" action="/Dashboard/AddEvent" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="eventName">Event Name</label>
-                            <input type="text" class="form-control" id="eventName" name="eventName" required>
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4>Upcoming Events</h4>
+            </div>
+            <div class="card-body">
+                <form id="eventForm" method="post" action="/Dashboard/AddEvent" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="eventName">Event Name</label>
+                        <input type="text" class="form-control" id="eventName" name="eventName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Event Date</label>
+                        <input type="date" class="form-control" id="eventDate" name="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Event Description</label>
+                        <textarea class="form-control" id="eventDescription" name="eventDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventImage">Event Images</label>
+                        <input type="file" class="form-control-file" id="eventImage" name="eventImage" accept="image/*" multiple required>
+                        <div id="imagePreviewContainer" class="mt-2"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Event</button>
+                </form>
+
+                <hr>
+
+                <div id="eventList">
+                    @foreach (var evt in Model.Events)
+                    {
+                        <div class="row mb-3">
+                            <div class="col-md-8">
+                                <h5>@evt.Name</h5>
+                                <p><strong>Date:</strong> @evt.Date.ToShortDateString()</p>
+                                <p>@evt.Description</p>
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <img src="~/images/events/@evt.ImagePath" alt="Event Image" class="img-thumbnail">
+                                <form method="post" action="/Dashboard/DeleteEvent/@evt.Id">
+                                    <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="eventDate">Event Date</label>
-                            <input type="date" class="form-control" id="eventDate" name="eventDate" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="eventDescription">Event Description</label>
-                            <textarea class="form-control" id="eventDescription" name="eventDescription" rows="3" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="eventImage">Event Images</label>
-                            <input type="file" class="form-control-file" id="eventImage" name="eventImage" accept="image/*" multiple required>
-                            <div id="imagePreviewContainer" class="mt-2"></div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add Event</button>
-                    </form>
+                    }
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- About Us Section -->
+    @section Scripts {
+        <script>
+            // Optional JavaScript code for handling events if needed
+        </script>
+    }
+
+    <!-- About Us Section -->
+    <div class="row">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header bg-secondary text-white">
@@ -135,9 +162,7 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
         <!-- Donation Counter Section -->
         <div class="col-md-6">
             <div class="card">
@@ -149,8 +174,10 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Locations Section -->
+    <!-- Locations Section -->
+    <div class="row">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header bg-info text-white">
@@ -173,8 +200,8 @@
         </div>
     </div>
 
+    <!-- Edit Contact Page Section -->
     <div class="row">
-        <!-- Edit Contact Page Section -->
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header bg-warning text-white">
@@ -200,6 +227,27 @@
                         </div>
                         <button type="submit" class="btn btn-warning">Save Changes</button>
                     </form>
+
+                    <hr>
+
+                    <div id="contactList">
+                        @foreach (var contact in Model.TeamContacts)
+                        {
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <h5>@contact.Name</h5>
+                                    <p><strong>Email:</strong> @contact.Email</p>
+                                    <p><strong>Phone:</strong> @contact.Phone</p>
+                                </div>
+                                <div class="col-md-4 text-right">
+                                    <img src="~/images/team/@contact.ImagePath" alt="Team Member Image" class="img-thumbnail">
+                                    <form method="post" action="/Dashboard/DeleteContact/@contact.Id">
+                                        <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
@@ -266,3 +314,4 @@
         }
     });
 </script>
+

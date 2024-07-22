@@ -1,50 +1,147 @@
-﻿@model List<WIL_v2_test.Models.Donation>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <style>
+        .bg-image {
+            background-image: url('/Images/umbrellabug.jpg');
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
 
-@{
-    ViewData["Title"] = "Donation Page";
-}
+        .navbar-custom {
+            background-color: white;
+            z-index: 1000;
+        }
 
-<h1 class="text-center">Donation Page</h1>
+        .content-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
 
-<div class="container">
-    <div class="card">
-        <div class="card-header bg-primary text-white">
-            <h4>Donation List</h4>
-        </div>
-        <div class="card-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var donation in Model)
-                    {
-                        <tr>
-                            <td>@donation.Id</td>
-                            <td>@donation.Amount.ToString("C")</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>
+        .text-dark {
+            color: #000000;
+        }
 
-    <div class="card mt-4">
-        <div class="card-header bg-success text-white">
-            <h4>Make a Donation</h4>
-        </div>
-        <div class="card-body">
-            <form method="post" action="/Donation/AddDonation">
-                <div class="form-group">
-                    <label for="amount">Amount:</label>
-                    <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
+        .btn-custom {
+            margin-top: 20px;
+        }
+
+        .overlay-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .card-body-white {
+            background-color: #ffffff; /* White background */
+            padding: 1.25rem; /* Padding for consistency */
+            border-radius: 0 0 0.25rem 0.25rem; /* Rounded corners at the bottom */
+        }
+
+        /* New CSS for the centered banking details section */
+        .banking-details {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+
+            .banking-details h5 {
+                margin-bottom: 10px;
+            }
+
+            .banking-details p {
+                margin: 5px 0;
+            }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" id="navbarText">Home</a> <!-- Initial text in navbar -->
+                        </li>
+                    </ul>
                 </div>
-                <button type="submit" class="btn btn-success">Donate</button>
-            </form>
+            </div>
+        </nav>
+        <!-- Navbar -->
+        <!-- Background image -->
+        <div class="bg-image d-flex justify-content-center align-items-center">
+            <div class="overlay-content text-center">
+                <div class="text-dark">
+                    <h1 class="mb-3">Donation Page</h1>
+                    <p class="card-text">This is the donation page.</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                    <a id="viewDetailsBtn" data-mdb-ripple-init class="btn btn-outline-dark btn-lg btn-custom" href="#!" role="button">View Details</a>
+                </div>
+            </div>
         </div>
+        <!-- End of Background image -->
+    </header>
+
+    <!-- Banking Details Section -->
+    <div id="bankingDetails" class="banking-details">
+        <h5>Banking Details</h5>
+        <p><strong>Account Name:</strong> Sample Account</p>
+        <p><strong>Bank Name:</strong> Sample Bank</p>
+        <p><strong>Account Number:</strong> 123456789</p>
+        <p><strong>Branch Code:</strong> 987654</p>
+        <p><strong>SWIFT Code:</strong> SB123456</p>
+        <button id="closeDetailsBtn" class="btn btn-primary">Close</button>
     </div>
-</div>
+    <!-- End of Banking Details Section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var viewDetailsBtn = document.getElementById('viewDetailsBtn');
+            var bankingDetails = document.getElementById('bankingDetails');
+            var closeDetailsBtn = document.getElementById('closeDetailsBtn');
+
+            viewDetailsBtn.addEventListener('click', function () {
+                bankingDetails.style.display = 'block'; // Show the banking details
+            });
+
+            closeDetailsBtn.addEventListener('click', function () {
+                bankingDetails.style.display = 'none'; // Hide the banking details
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
 

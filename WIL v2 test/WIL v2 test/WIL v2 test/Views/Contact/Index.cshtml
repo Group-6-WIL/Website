@@ -4,112 +4,79 @@
     ViewData["Title"] = "Contact Us";
 }
 
-<div class="container">
-    <h1 class="text-center">Contact Us</h1>
-
-    <div class="card">
-        <div class="card-header bg-secondary text-white">
-            <h4>Contact Us</h4>
-        </div>
-        <div class="card-body">
-            <form method="post" action="/Contact/EditContact" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="teamMember">Team Member</label>
-                    <input type="text" class="form-control" id="teamMember" name="teamMember" value="@Model.TeamMember" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="email" value="@Model.Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="text" class="form-control" id="phone" name="phone" value="@Model.Phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="teamMemberImage">Team Member Image</label>
-                    <input type="file" class="form-control-file" id="teamMemberImage" name="teamMemberImage">
-                    @if (!string.IsNullOrEmpty(Model.ContactUsImagePath))
-                    {
-                        <div>
-                            <img src="@Url.Content("~/team/" + Model.ContactUsImagePath)" alt="Team Member Image" width="150" height="150">
-                        </div>
-                    }
-                </div>
-                <button type="submit" class="btn btn-secondary">Save Changes</button>
-            </form>
-        </div>
-    </div>
-</div>
-
 <style>
     body {
-        background-color: #f5f5f5;
-    }
-
-    .container {
-        margin-top: 50px;
+        background-color: #f4f5f7;
     }
 
     .card {
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
+        border-radius: .5rem;
     }
 
-    .card-header {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        padding: 15px;
+    .gradient-custom {
+        /* Add your gradient here */
+        background: linear-gradient(to right, #ff6f00, #ff9100);
     }
 
-    .card-body {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        padding: 20px;
+    .img-fluid {
+        width: 80px;
     }
 
-    .btn {
-        border-radius: 20px;
-        padding: 10px 20px;
+    .text-muted {
+        color: #6c757d !important;
     }
-
-    .form-control,
-    .form-control-file {
-        border-radius: 10px;
-    }
-
-    .text-center {
-        color: #333;
-        margin-bottom: 30px;
-    }
-
-    .form-group label {
-        font-weight: bold;
-        color: #333;
-    }
-
-    .image-preview {
-        position: relative;
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-
-        .image-preview img {
-            border-radius: 10px;
-            width: 100px;
-            height: 100px;
-        }
-
-        .image-preview .remove-image {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.8);
-            color: red;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 50%;
-            padding: 0 5px;
-        }
 </style>
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4 gradient-custom text-center text-white">
+                            <img src="~/team/@Model.ContactUsImagePath"
+                                 alt="Team Member Image"
+                                 class="img-fluid my-5" />
+                            <h5>@Model.TeamMember</h5>
+                            <p>Web Designer</p>
+                            <i class="far fa-edit mb-5"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <h6>Information</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">@Model.Email</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone</h6>
+                                        <p class="text-muted">@Model.Phone</p>
+                                    </div>
+                                </div>
+                                <h6>Projects</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Recent</h6>
+                                        <p class="text-muted">Lorem ipsum</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Most Viewed</h6>
+                                        <p class="text-muted">Dolor sit amet</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                                    <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                                    <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

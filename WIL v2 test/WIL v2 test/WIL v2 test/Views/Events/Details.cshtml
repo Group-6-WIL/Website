@@ -1,0 +1,37 @@
+﻿@model WIL_v2_test.Models.Events
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Name - Event Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card mb-3">
+                    <img src="@Url.Content(Model.ImagePath)" class="card-img-top" alt="@Model.Name">
+                    <div class="card-body">
+                        <h1 class="card-title">@Model.Name</h1>
+                        <p class="card-text">@Model.Description</p>
+                        <p class="card-text">
+                            <small class="text-muted">Date: @Model.Date.ToString("d MMM yyyy")</small>
+                        </p>
+                        <a href="@Url.Action("Index", "Dashboard")" class="btn btn-secondary">Back to Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Footer -->
+
+</body>
+</html>

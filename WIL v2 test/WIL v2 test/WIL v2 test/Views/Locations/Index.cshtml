@@ -105,18 +105,9 @@
         </div>
 
         <div class="location-table">
-            <p>
-                <a asp-action="Create" class="btn btn-primary">Create New Location</a>
-            </p>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Name)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Address)
-                        </th>
                         <th></th>
                     </tr>
                 </thead>
@@ -124,12 +115,6 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Address)
-                            </td>
                             <td>
                                 <!-- You can add edit/delete actions here if needed -->
                             </td>

@@ -4,7 +4,6 @@ using WIL_v2_test.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.IO;
-using System;
 using System.Linq;
 
 namespace WIL_v2_test.Controllers

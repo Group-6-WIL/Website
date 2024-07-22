@@ -1,45 +1,25 @@
 ﻿@model List<WIL_v2_test.Models.Events>
 
-<h1>Events</h1>
+<h1 class="text-center">Events</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
-</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="container">
+    <div class="row">
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="@(Url.Content("~/events/" + item.ImagePath) ?? Url.Content("~/images/default.png"))" class="card-img-top" alt="@item.Name" />
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">@item.Description</p>
+                        <p class="card-text">
+                            <small class="text-muted">Date: @item.Date.ToString("d MMM yyyy")</small>
+                        </p>
+                        <a href="@Url.Action("EventDetails", "Dashboard", new { id = item.Id })" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+</div>
+

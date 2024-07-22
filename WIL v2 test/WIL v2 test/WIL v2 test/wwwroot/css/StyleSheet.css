@@ -1,0 +1,27 @@
+﻿.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.card-img-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text readability */
+}
+
+.table-light {
+    background-color: rgba(255, 255, 255, 0.8); /* Light table background */
+}
