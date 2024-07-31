@@ -101,7 +101,7 @@
                     <div class="form-group">
                         <label for="eventImage">Event Images</label>
                         <input type="file" class="form-control-file" id="eventImage" name="eventImage" accept="image/*" multiple required>
-                        <div id="imagePreviewContainer" class="mt-2"></div>
+                        <div id="eventImagePreviewContainer" class="mt-2"></div>
                     </div>
                     <button type="submit" class="btn btn-primary">Add Event</button>
                 </form>
@@ -130,12 +130,6 @@
         </div>
     </div>
 
-    @section Scripts {
-        <script>
-            // Optional JavaScript code for handling events if needed
-        </script>
-    }
-
     <!-- About Us Section -->
     <div class="row">
         <div class="col-md-6">
@@ -154,16 +148,16 @@
                             <textarea class="form-control" id="missionContent" name="missionContent" rows="5" required>@Model.MissionContent</textarea>
                         </div>
                         <div class="form-group">
-                            <label for="aboutUsImage">Upload Image</label>
-                            <input type="file" class="form-control-file" id="aboutUsImage" name="aboutUsImage" />
+                            <label for="aboutUsImage">Upload Images</label>
+                            <input type="file" class="form-control-file" id="aboutUsImage" name="aboutUsImage" multiple />
+                            <div id="aboutUsImagePreviewContainer" class="mt-2"></div>
                         </div>
                         <button type="submit" class="btn btn-secondary">Save Changes</button>
                     </form>
                 </div>
             </div>
         </div>
-
-      
+    </div>
 
     <!-- Locations Section -->
     <div class="row">
@@ -211,8 +205,9 @@
                             <input type="text" class="form-control" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="teamMemberImage">Team Member Image</label>
-                            <input type="file" class="form-control-file" id="teamMemberImage" name="teamMemberImage" required>
+                            <label for="teamMemberImage">Team Member Images</label>
+                            <input type="file" class="form-control-file" id="teamMemberImage" name="teamMemberImage" multiple required>
+                            <div id="teamMemberImagePreviewContainer" class="mt-2"></div>
                         </div>
                         <button type="submit" class="btn btn-warning">Save Changes</button>
                     </form>
@@ -243,64 +238,51 @@
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const eventImageInput = document.getElementById('eventImage');
-        const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageInputs = [
+                { inputId: 'aboutUsImage', previewContainerId: 'aboutUsImagePreviewContainer' },
+                { inputId: 'teamMemberImage', previewContainerId: 'teamMemberImagePreviewContainer' },
+                { inputId: 'eventImage', previewContainerId: 'eventImagePreviewContainer' }
+            ];
 
-        eventImageInput.addEventListener('change', function (event) {
-            const files = event.target.files;
-            imagePreviewContainer.innerHTML = '';
+            imageInputs.forEach(function (imageInput) {
+                const inputElement = document.getElementById(imageInput.inputId);
+                const previewContainer = document.getElementById(imageInput.previewContainerId);
 
-            for (let i = 0; i < files.length; i++) {
-                const file = files[i];
-                const reader = new FileReader();
+                inputElement.addEventListener('change', function (event) {
+                    previewContainer.innerHTML = '';
+                    Array.from(event.target.files).forEach(function (file, index) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            const preview = document.createElement('div');
+                            preview.className = 'image-preview';
+                            const img = document.createElement('img');
+                            img.src = e.target.result;
+                            preview.appendChild(img);
 
-                reader.onload = function (e) {
-                    const imagePreview = document.createElement('div');
-                    imagePreview.classList.add('image-preview');
+                            const removeButton = document.createElement('span');
+                            removeButton.className = 'remove-image';
+                            removeButton.textContent = 'X';
+                            removeButton.addEventListener('click', function () {
+                                const dataTransfer = new DataTransfer();
+                                Array.from(event.target.files).forEach((f, i) => {
+                                    if (i !== index) {
+                                        dataTransfer.items.add(f);
+                                    }
+                                });
+                                event.target.files = dataTransfer.files;
+                                preview.remove();
+                            });
 
-                    const img = document.createElement('img');
-                    img.src = e.target.result;
-                    img.alt = file.name;
-
-                    const removeButton = document.createElement('span');
-                    removeButton.textContent = 'x';
-                    removeButton.classList.add('remove-image');
-
-                    removeButton.addEventListener('click', function () {
-                        imagePreviewContainer.removeChild(imagePreview);
-                        updateFileCount();
+                            preview.appendChild(removeButton);
+                            previewContainer.appendChild(preview);
+                        };
+                        reader.readAsDataURL(file);
                     });
-
-                    imagePreview.appendChild(img);
-                    imagePreview.appendChild(removeButton);
-                    imagePreviewContainer.appendChild(imagePreview);
-                    updateFileCount();
-                };
-
-                reader.readAsDataURL(file);
-            }
-
-            function updateFileCount() {
-                const previewItems = imagePreviewContainer.querySelectorAll('.image-preview');
-                const fileCount = previewItems.length;
-                console.log("Files Count: " + fileCount);
-            }
+                });
+            });
         });
-        Preview.addEventListener('click', function (event) {
-            if (event.target.classList.contains('remove-image')) {
-                const imagePreview = event.target.parentNode;
-                imagePreviewContainer.removeChild(imagePreview);
-                updateFileCount();
-            }
-        });
-
-        function updateFileCount() {
-            const previewItems = imagePreviewContainer.querySelectorAll('.image-preview');
-            const fileCount = previewItems.length;
-            console.log("Files Count: " + fileCount);
-        }
-    });
-</script>
-
+    </script>
+}

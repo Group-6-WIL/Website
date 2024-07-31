@@ -6,7 +6,6 @@
         public string TeamMember { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-
-        public string ImagePath { get; set; } // Add this property
+        public string ImagePath { get; set; } // Change this to string to store multiple paths
     }
 }

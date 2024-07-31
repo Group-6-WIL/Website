@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="card mb-3">
-                    <img src="@Url.Content(Model.ImagePath)" class="card-img-top" alt="@Model.Name">
+                    <img src="@(Url.Content("~/events/" + Model.ImagePath) ?? Url.Content("~/images/default.png"))" class="card-img-top" alt="@Model.Name">
                     <div class="card-body">
                         <h1 class="card-title">@Model.Name</h1>
                         <p class="card-text">@Model.Description</p>
@@ -32,6 +31,5 @@
         <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>
     <!-- Footer -->
-
 </body>
 </html>

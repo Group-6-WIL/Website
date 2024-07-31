@@ -35,22 +35,22 @@ namespace WIL_v2_test.Controllers
                 ImagePath = aboutUs?.ImagePath, // Include this if you have an image path in the database
                 TotalDonations = _context.Donations.Sum(d => d.Amount),
                 Events = _context.Events.ToList(),
-                 TeamContacts = _context.TeamContacts.ToList() // Add this line
+                TeamContacts = _context.TeamContacts.ToList() // Add this line
             };
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult AddEvent(string eventName, DateTime eventDate, string eventDescription, IFormFile eventImage)
+        public IActionResult AddEvent(string eventName, DateTime eventDate, string eventDescription, List<IFormFile> eventImage)
         {
-            string uniqueFileName = ProcessUploadedFile(eventImage, "events");
+            List<string> imagePaths = ProcessUploadedFiles(eventImage, "events");
 
             var newEvent = new Events
             {
                 Name = eventName,
                 Date = eventDate,
                 Description = eventDescription,
-                ImagePath = uniqueFileName
+                ImagePath = string.Join(";", imagePaths)
             };
             _context.Events.Add(newEvent);
             _context.SaveChanges();
@@ -58,22 +58,21 @@ namespace WIL_v2_test.Controllers
             return RedirectToAction("Index");
         }
 
-
         [HttpPost]
-        public IActionResult EditAboutUs(string aboutUsContent, string missionContent, IFormFile aboutUsImage)
+        public IActionResult EditAboutUs(string aboutUsContent, string missionContent, List<IFormFile> aboutUsImage)
         {
-            string uniqueFileName = ProcessUploadedFile(aboutUsImage, "images");
+            List<string> imagePaths = ProcessUploadedFiles(aboutUsImage, "images");
 
             var aboutUs = _context.AboutUs.FirstOrDefault();
             if (aboutUs != null)
             {
                 aboutUs.Content = aboutUsContent;
                 aboutUs.Mission = missionContent;
-                aboutUs.ImagePath = uniqueFileName;
+                aboutUs.ImagePath = string.Join(";", imagePaths);
             }
             else
             {
-                _context.AboutUs.Add(new AboutUs { Content = aboutUsContent, Mission = missionContent, ImagePath = uniqueFileName });
+                _context.AboutUs.Add(new AboutUs { Content = aboutUsContent, Mission = missionContent, ImagePath = string.Join(";", imagePaths) });
             }
             _context.SaveChanges();
 
@@ -94,20 +93,17 @@ namespace WIL_v2_test.Controllers
             return RedirectToAction("Index");
         }
 
-
-
-
         [HttpPost]
-        public IActionResult EditContact(string teamMember, string email, string phone, IFormFile teamMemberImage)
+        public IActionResult EditContact(string teamMember, string email, string phone, List<IFormFile> teamMemberImage)
         {
-            string uniqueFileName = ProcessUploadedFile(teamMemberImage, "team");
+            List<string> imagePaths = ProcessUploadedFiles(teamMemberImage, "team");
 
             var contact = _context.Contacts.FirstOrDefault(c => c.TeamMember == teamMember);
             if (contact != null)
             {
                 contact.Email = email;
                 contact.Phone = phone;
-                contact.ImagePath = uniqueFileName;
+                contact.ImagePath = string.Join(";", imagePaths);
             }
             else
             {
@@ -116,7 +112,7 @@ namespace WIL_v2_test.Controllers
                     TeamMember = teamMember,
                     Email = email,
                     Phone = phone,
-                    ImagePath = uniqueFileName
+                    ImagePath = string.Join(";", imagePaths)
                 });
             }
             _context.SaveChanges();
@@ -140,7 +136,6 @@ namespace WIL_v2_test.Controllers
             return RedirectToAction("Index");
         }
 
-
         public IActionResult EventDetails(int id)
         {
             var eventDetails = _context.Events.Find(id);
@@ -150,37 +145,36 @@ namespace WIL_v2_test.Controllers
                 return NotFound();
             }
 
-            return View(eventDetails); // This should map to /Views/Dashboard/EventDetails.cshtml
+            return View("~/Views/Events/Details.cshtml", eventDetails); // Specify the correct view path
         }
 
-        //***
-
-
-
-
-       private string ProcessUploadedFile(IFormFile file, string folderName)
-{
-    string uniqueFileName = null;
-
-    if (file != null)
-    {
-        string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, folderName);
-        if (!Directory.Exists(uploadsFolder))
+        private List<string> ProcessUploadedFiles(List<IFormFile> files, string folderName)
         {
-            Directory.CreateDirectory(uploadsFolder);
+            List<string> fileNames = new List<string>();
+
+            if (files != null && files.Count > 0)
+            {
+                string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, folderName);
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                foreach (var file in files)
+                {
+                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+
+                    fileNames.Add(uniqueFileName);
+                }
+            }
+
+            return fileNames;
         }
-
-        uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
-        string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-        using (var fileStream = new FileStream(filePath, FileMode.Create))
-        {
-            file.CopyTo(fileStream);
-        }
-    }
-
-    return uniqueFileName;
-}
-
     }
 }
