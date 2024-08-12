@@ -119,7 +119,8 @@
                             </div>
                             <div class="col-md-4 text-right">
                                 <img src="~/images/events/@evt.ImagePath" alt="Event Image" class="img-thumbnail">
-                                <form method="post" action="/Dashboard/DeleteEvent/@evt.Id">
+                                <button type="button" class="btn btn-secondary mt-2" data-toggle="modal" data-target="#editEventModal" data-id="@evt.Id" data-name="@evt.Name" data-date="@evt.Date.ToString("yyyy-MM-dd")" data-description="@evt.Description">Edit</button>
+                                <form method="post" action="/Dashboard/DeleteEvent/@evt.Id" class="d-inline">
                                     <button type="submit" class="btn btn-danger mt-2">Delete</button>
                                 </form>
                             </div>
@@ -225,64 +226,119 @@
                                 </div>
                                 <div class="col-md-4 text-right">
                                     <img src="~/images/team/@contact.ImagePath" alt="Team Member Image" class="img-thumbnail">
-                                    <form method="post" action="/Dashboard/DeleteContact/@contact.Id">
+                                    <form method="post" action="/Dashboard/DeleteContact/@contact.Id" class="d-inline">
                                         <button type="submit" class="btn btn-danger mt-2">Delete</button>
                                     </form>
                                 </div>
                             </div>
+                        }
                         }
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-@section Scripts {
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const imageInputs = [
-                { inputId: 'aboutUsImage', previewContainerId: 'aboutUsImagePreviewContainer' },
-                { inputId: 'teamMemberImage', previewContainerId: 'teamMemberImagePreviewContainer' },
-                { inputId: 'eventImage', previewContainerId: 'eventImagePreviewContainer' }
-            ];
+    <!-- Edit Event Modal -->
+    <div class="modal fade" id="editEventModal" tabindex="-1" aria-labelledby="editEventModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="post" action="/Dashboard/EditEvent" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editEventModalLabel">Edit Event</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="editEventId" name="Id" />
+                        <div class="form-group">
+                            <label for="editEventName">Event Name</label>
+                            <input type="text" class="form-control" id="editEventName" name="eventName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editEventDate">Event Date</label>
+                            <input type="date" class="form-control" id="editEventDate" name="eventDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editEventDescription">Event Description</label>
+                            <textarea class="form-control" id="editEventDescription" name="eventDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="editEventImage">Event Images</label>
+                            <input type="file" class="form-control-file" id="editEventImage" name="eventImage" accept="image/*" multiple />
+                            <div id="editEventImagePreviewContainer" class="mt-2"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-            imageInputs.forEach(function (imageInput) {
-                const inputElement = document.getElementById(imageInput.inputId);
-                const previewContainer = document.getElementById(imageInput.previewContainerId);
+    @section Scripts {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const imageInputs = [
+                    { inputId: 'aboutUsImage', previewContainerId: 'aboutUsImagePreviewContainer' },
+                    { inputId: 'teamMemberImage', previewContainerId: 'teamMemberImagePreviewContainer' },
+                    { inputId: 'eventImage', previewContainerId: 'eventImagePreviewContainer' },
+                    { inputId: 'editEventImage', previewContainerId: 'editEventImagePreviewContainer' }
+                ];
 
-                inputElement.addEventListener('change', function (event) {
-                    previewContainer.innerHTML = '';
-                    Array.from(event.target.files).forEach(function (file, index) {
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            const preview = document.createElement('div');
-                            preview.className = 'image-preview';
-                            const img = document.createElement('img');
-                            img.src = e.target.result;
-                            preview.appendChild(img);
+                imageInputs.forEach(function (imageInput) {
+                    const inputElement = document.getElementById(imageInput.inputId);
+                    const previewContainer = document.getElementById(imageInput.previewContainerId);
 
-                            const removeButton = document.createElement('span');
-                            removeButton.className = 'remove-image';
-                            removeButton.textContent = 'X';
-                            removeButton.addEventListener('click', function () {
-                                const dataTransfer = new DataTransfer();
-                                Array.from(event.target.files).forEach((f, i) => {
-                                    if (i !== index) {
-                                        dataTransfer.items.add(f);
-                                    }
+                    inputElement.addEventListener('change', function (event) {
+                        previewContainer.innerHTML = '';
+                        Array.from(event.target.files).forEach(function (file, index) {
+                            const reader = new FileReader();
+                            reader.onload = function (e) {
+                                const preview = document.createElement('div');
+                                preview.className = 'image-preview';
+                                const img = document.createElement('img');
+                                img.src = e.target.result;
+                                preview.appendChild(img);
+
+                                const removeButton = document.createElement('span');
+                                removeButton.className = 'remove-image';
+                                removeButton.textContent = 'X';
+                                removeButton.addEventListener('click', function () {
+                                    const dataTransfer = new DataTransfer();
+                                    Array.from(event.target.files).forEach((f, i) => {
+                                        if (i !== index) {
+                                            dataTransfer.items.add(f);
+                                        }
+                                    });
+                                    event.target.files = dataTransfer.files;
+                                    preview.remove();
                                 });
-                                event.target.files = dataTransfer.files;
-                                preview.remove();
-                            });
 
-                            preview.appendChild(removeButton);
-                            previewContainer.appendChild(preview);
-                        };
-                        reader.readAsDataURL(file);
+                                preview.appendChild(removeButton);
+                                previewContainer.appendChild(preview);
+                            };
+                            reader.readAsDataURL(file);
+                        });
                     });
                 });
+
+                $('#editEventModal').on('show.bs.modal', function (event) {
+                    var button = $(event.relatedTarget);
+                    var id = button.data('id');
+                    var name = button.data('name');
+                    var date = button.data('date');
+                    var description = button.data('description');
+
+                    var modal = $(this);
+                    modal.find('#editEventId').val(id);
+                    modal.find('#editEventName').val(name);
+                    modal.find('#editEventDate').val(date);
+                    modal.find('#editEventDescription').val(description);
+                });
             });
-        });
-    </script>
-}
+        </script>
+    }

@@ -13,11 +13,30 @@
             padding: 50px 0;
         }
 
-        .card-img-overlay {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .main-image {
+            height: 400px; /* Adjust the height as needed */
+            object-fit: cover; /* Ensure the image covers the entire area */
+            border-radius: 15px; /* Add this line for curved corners */
+            overflow: hidden; /* Ensure any overflow is hidden */
+        }
+
+        .additional-cards {
+            margin-top: 20px;
+        }
+
+            .additional-cards .card {
+                margin-bottom: 20px;
+                overflow: hidden; /* Ensure any overflow is hidden */
+            }
+
+            .additional-cards .card-img-top {
+                height: 200px; /* Set the desired height */
+                object-fit: cover; /* Ensure the image covers the entire area */
+                border-radius: 15px; /* Add this line for curved corners */
+            }
+
+        .about-content {
+            margin-top: 20px;
             text-align: center;
         }
     </style>
@@ -29,15 +48,42 @@
                 <div class="card bg-dark text-white">
                     @if (!string.IsNullOrEmpty(Model.ImagePath))
                     {
-                        <img src="~/images/@Model.ImagePath" class="card-img" alt="About Us and Mission Image" />
+                        <img src="~/images/@Model.ImagePath" class="card-img main-image" alt="About Us and Mission Image" />
                     }
-                    <div class="card-img-overlay">
-                        <h2 class="card-title">About Us</h2>
-                        <p class="card-text">@Model.AboutUsContent</p>
-                        <h2 class="card-title mt-4">Our Mission</h2>
-                        <p class="card-text">@Model.MissionContent</p>
-                        <p class="card-text mt-4">Last updated 3 mins ago</p>
-                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row about-content">
+            <div class="col-12">
+                <h2>About Us</h2>
+                <p>@Model.AboutUsContent</p>
+                <h2 class="mt-4">Our Mission</h2>
+                <p>@Model.MissionContent</p>
+                <p class="mt-4">Last updated 3 mins ago</p>
+            </div>
+        </div>
+
+        <!-- Additional Cards Section -->
+        <div class="row additional-cards">
+            <div class="col-md-6">
+                <div class="card" style="width: 100%;">
+                    <img src="~/images/ladybird-about1.jpg" class="card-img-top" alt="Card Image 1" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 100%;">
+                    <img src="~/images/ladybird-about2.jpg" class="card-img-top" alt="Card Image 2" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 100%;">
+                    <img src="~/images/ladybird-about3.jpg" class="card-img-top" alt="Card Image 3" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 100%;">
+                    <img src="~/images/ladybird-about4.jpg" class="card-img-top" alt="Card Image 4" />
                 </div>
             </div>
         </div>
