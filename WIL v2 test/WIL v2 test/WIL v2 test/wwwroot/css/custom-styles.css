@@ -1,0 +1,88 @@
+/* custom-styles.css */
+
+/* Modern Dropdown Styling */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 200px;
+    position: absolute; /* Ensure dropdown is positioned correctly */
+    left: 0; /* Align dropdown to the left side */
+}
+
+.dropdown-item {
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+        color: #007bff;
+    }
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+    .nav-link img {
+        margin-right: 8px;
+    }
+
+.navbar {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+    .navbar-nav.ml-auto {
+        margin-left: auto; /* Push login/register buttons to the right */
+    }
+
+/* Additional styling for dark mode */
+@media (prefers-color-scheme: dark) {
+    .dropdown-menu {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .dropdown-item {
+        color: white;
+    }
+
+        .dropdown-item:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+}
+
+/* Custom styles for button highlighting */
+.btn-dark:focus, .btn-dark:active {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25); /* Red highlight */
+    background-color: #dc3545; /* Optional: Change background color on focus/active */
+    color: white; /* Optional: Change text color on focus/active */
+}
+
+    .btn-dark:focus:not(:focus-visible), .btn-dark:active:not(:focus-visible) {
+        box-shadow: none; /* Prevent outline for non-focus-visible states */
+    }
+
+/* Add this to your CSS file */
+.form-control:focus {
+    border-color: red; /* Change border color to red */
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25); /* Add a red shadow to make it more prominent */
+}

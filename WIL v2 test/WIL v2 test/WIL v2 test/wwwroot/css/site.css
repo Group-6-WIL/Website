@@ -16,12 +16,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    font-family: Georgia, serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header, main {
     flex: 1;
 }
+
+.btn-dark-white-text {
+    color: white !important;
+}
+
 
 .footer {
     text-align: center;
@@ -53,11 +58,11 @@ header, main {
 /* Define styles for your login button */
 .login-button {
     margin-top: 30px;
-    font-family: Georgia;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     width: 40%;
     height: 10%;
-    background-color: green;
+    background-color: red;
     color: black;
     padding: 10px 20px;
     border: none;
@@ -68,17 +73,17 @@ header, main {
 }
 
     .login-button:hover {
-        background-color: darkgreen;
+        background-color: red;
     }
 
 /* Define styles for your register button */
 .register-button {
     margin-top: 30px;
-    font-family: Georgia;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     width: 40%;
     height: 50%;
-    background-color: green;
+    background-color: red;
     color: black;
     padding: 10px 10px;
     border: none;
@@ -89,7 +94,7 @@ header, main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Georgia, serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -98,7 +103,7 @@ h2 {
 }
 
 p {
-    font-family: Georgia, serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .ladybug-pattern {
