@@ -193,8 +193,9 @@
                 </div>
                 <div class="card-body">
                     <form method="post" action="/Dashboard/EditContact" enctype="multipart/form-data">
+                        <input type="hidden" id="contactId" name="id" value="" /> <!-- Hidden field to store contact ID -->
                         <div class="form-group">
-                            <label for="teamMember">Team Member</label>
+                            <label for="teamMember">Team Member Name</label>
                             <input type="text" class="form-control" id="teamMember" name="teamMember" required>
                         </div>
                         <div class="form-group">
@@ -206,8 +207,8 @@
                             <input type="text" class="form-control" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="teamMemberImage">Team Member Images</label>
-                            <input type="file" class="form-control-file" id="teamMemberImage" name="teamMemberImage" multiple required>
+                            <label for="teamMemberImage">Team Member Image</label>
+                            <input type="file" class="form-control-file" id="teamMemberImage" name="teamMemberImage" accept="image/*">
                             <div id="teamMemberImagePreviewContainer" class="mt-2"></div>
                         </div>
                         <button type="submit" class="btn btn-warning">Save Changes</button>
@@ -220,24 +221,38 @@
                         {
                             <div class="row mb-3">
                                 <div class="col-md-8">
-                                    <h5>@contact.Name</h5>
+                                    <p><strong>Name:</strong> @contact.TeamMember</p>
                                     <p><strong>Email:</strong> @contact.Email</p>
                                     <p><strong>Phone:</strong> @contact.Phone</p>
                                 </div>
                                 <div class="col-md-4 text-right">
-                                    <img src="~/images/team/@contact.ImagePath" alt="Team Member Image" class="img-thumbnail">
+                                    <img src="~/team/@contact.ImagePath" alt="Team Member Image" class="img-thumbnail" style="max-width: 100px; height: auto;">
+                                    <!-- Edit Button -->
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="populateEditForm('@contact.Id', '@contact.TeamMember', '@contact.Email', '@contact.Phone')">Edit</button>
+                                    <!-- Delete Button -->
                                     <form method="post" action="/Dashboard/DeleteContact/@contact.Id" class="d-inline">
                                         <button type="submit" class="btn btn-danger mt-2">Delete</button>
                                     </form>
                                 </div>
                             </div>
                         }
-                        }
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript function to populate the form with selected contact details for editing
+        function populateEditForm(id, teamMember, email, phone) {
+            document.getElementById('contactId').value = id;
+            document.getElementById('teamMember').value = teamMember;
+            document.getElementById('email').value = email;
+            document.getElementById('phone').value = phone;
+        }
+    </script>
+
+
 
     <!-- Edit Event Modal -->
     <div class="modal fade" id="editEventModal" tabindex="-1" aria-labelledby="editEventModalLabel" aria-hidden="true">
