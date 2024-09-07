@@ -11,6 +11,30 @@
     <link rel="stylesheet" href="~/WIL_V1.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/custom-styles.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Inline CSS for footer positioning -->
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1; /* Allows container to expand and push footer down */
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>

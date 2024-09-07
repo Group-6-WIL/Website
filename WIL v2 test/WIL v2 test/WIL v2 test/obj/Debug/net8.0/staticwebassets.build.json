@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qbF5ygKRIiIxTaGSKXW0lYzJh6nW8Bkp/iJuv8RHn2E=",
+  "Hash": "/Kx3GVAKvE6sTO1+BLbZpWN16JIQMOV9YupAqkfk4/E=",
   "Source": "WIL v2 test",
   "BasePath": "_content/WIL v2 test",
   "Mode": "Default",
@@ -1252,6 +1252,25 @@
       "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
+      "Identity": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\events\\1d63fa72-59e4-4116-bb43-47737f97d14b_2.png",
+      "SourceId": "WIL v2 test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\",
+      "BasePath": "_content/WIL v2 test",
+      "RelativePath": "events/1d63fa72-59e4-4116-bb43-47737f97d14b_2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\events\\1d63fa72-59e4-4116-bb43-47737f97d14b_2.png"
+    },
+    {
       "Identity": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\events\\220c6ba6-cef7-4493-9763-6a9eda975eae_photo-1592818868295-f527dbac420d.jpeg",
       "SourceId": "WIL v2 test",
       "SourceType": "Discovered",
@@ -1288,6 +1307,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\events\\2e980909-6168-437c-97c2-06cd3138e66c_Genuine-Leather-Buccaneer-School-Shoes-wholesale-Cape-Town-1200x900.jpg"
+    },
+    {
+      "Identity": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\events\\51ed2c1b-7963-47d0-bf0c-cfe3082b2580_2.png",
+      "SourceId": "WIL v2 test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\",
+      "BasePath": "_content/WIL v2 test",
+      "RelativePath": "events/51ed2c1b-7963-47d0-bf0c-cfe3082b2580_2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\events\\51ed2c1b-7963-47d0-bf0c-cfe3082b2580_2.png"
     },
     {
       "Identity": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\events\\564c17e6-3c04-4172-9390-2ecd7eaa5521_Genuine-Leather-Buccaneer-School-Shoes-wholesale-Cape-Town-1200x900.jpg",
@@ -1383,6 +1421,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\events\\af48bdf7-fa4c-4b56-94c3-32b1731455cf_Genuine-Leather-Buccaneer-School-Shoes-wholesale-Cape-Town-1200x900.jpg"
+    },
+    {
+      "Identity": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\events\\c52d3795-eccf-4fb9-bde6-bff41e781557_2.png",
+      "SourceId": "WIL v2 test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\",
+      "BasePath": "_content/WIL v2 test",
+      "RelativePath": "events/c52d3795-eccf-4fb9-bde6-bff41e781557_2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\events\\c52d3795-eccf-4fb9-bde6-bff41e781557_2.png"
     },
     {
       "Identity": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\wwwroot\\events\\cd0531ea-4283-4677-959f-dbef6b3fca97_Genuine-Leather-Buccaneer-School-Shoes-wholesale-Cape-Town-1200x900.jpg",
