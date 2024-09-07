@@ -35,10 +35,124 @@ namespace WIL_v2_test.Controllers
                 ImagePath = aboutUs?.ImagePath,
                 TotalDonations = _context.Donations.Sum(d => d.Amount),
                 Events = _context.Events.ToList(),
+                Locations = _context.Locations.ToList(), // Ensure Locations is initialized
                 TeamContacts = _context.Contacts.ToList() // Changed to the correct property name 'Contacts'
             };
             return View(model);
         }
+        [HttpPost]
+        public IActionResult AddEvent(string eventName, DateTime eventDate, string eventDescription, List<IFormFile> eventImage)
+        {
+            List<string> imagePaths = ProcessUploadedFiles(eventImage, "events");
+
+            var newEvent = new Events
+            {
+                Name = eventName,
+                Date = eventDate,
+                Description = eventDescription,
+                ImagePath = string.Join(";", imagePaths)
+            };
+            _context.Events.Add(newEvent);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult EditEvent(int id, string eventName, DateTime eventDate, string eventDescription, List<IFormFile> eventImage)
+        {
+            List<string> imagePaths = ProcessUploadedFiles(eventImage, "team");
+
+             var eventToUpdate = _context.Events.FirstOrDefault(e => e.Id == id);
+            if (eventToUpdate != null)
+            {
+                    _logger.LogError($"Event with id {id} not found.");
+                    return NotFound();
+                }
+            // Update event details
+            eventToUpdate.Name = eventName;
+            eventToUpdate.Date = eventDate;
+            eventToUpdate.Description = eventDescription;
+           
+                _context.Events.Update(eventToUpdate);
+                _context.SaveChanges();
+
+
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpPost]
+        public IActionResult DeleteEvent(int id)
+        {
+            var eventToDelete = _context.Events.Find(id);
+            if (eventToDelete == null)
+            {
+                _logger.LogError($"Event with id {id} not found.");
+                return NotFound();
+            }
+
+            _context.Events.Remove(eventToDelete);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult EventDetails(int id)
+        {
+            var eventDetails = _context.Events.Find(id);
+            if (eventDetails == null)
+            {
+                _logger.LogError($"Event with id {id} not found.");
+                return NotFound();
+            }
+
+            return View("~/Views/Events/Details.cshtml", eventDetails); // Specify the correct view path
+        }
+
+
+        [HttpPost]
+        public IActionResult EditAboutUs(string aboutUsContent, string missionContent, List<IFormFile> aboutUsImage)
+        {
+            List<string> imagePaths = ProcessUploadedFiles(aboutUsImage, "images");
+
+            var aboutUs = _context.AboutUs.FirstOrDefault();
+            if (aboutUs != null)
+            {
+                aboutUs.Content = aboutUsContent;
+                aboutUs.Mission = missionContent;
+                aboutUs.ImagePath = string.Join(";", imagePaths);
+            }
+            else
+            {
+                _context.AboutUs.Add(new AboutUs { Content = aboutUsContent, Mission = missionContent, ImagePath = string.Join(";", imagePaths) });
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult AddLocation(string locationName, string locationAddress)
+        {
+            var newLocation = new Location
+            {
+                Name = locationName,
+                Address = locationAddress
+            };
+            _context.Locations.Add(newLocation);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index"); // Redirect to Locations page
+        }
+
+        public IActionResult Locations()
+        {
+            var locations = _context.Locations.ToList(); // Retrieve all locations from the database
+            return View(locations); // Pass locations to the view
+        }
+
+
 
         [HttpPost]
         public IActionResult EditContact(int id, string teamMember, string email, string phone, List<IFormFile> teamMemberImage)

@@ -20,19 +20,30 @@
     .card-header {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+        background-color: #ba0f30; /* Red banner color */
+        color: white; /* Make button text white */
         padding: 15px;
     }
 
     .card-body {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        background-color: #ffffff; /* Red banner color */
         padding: 20px;
     }
+
 
     .btn {
         border-radius: 20px;
         padding: 10px 20px;
+        background-color: #ba0f30; /* Same color as the heading */
+        border: none; /* Remove border */
+        color: white; /* Make button text white */
     }
+
+        .btn:hover {
+            background-color: #a00d28; /* Slightly darker shade for hover */
+        }
 
     .form-control,
     .form-control-file {
@@ -81,7 +92,7 @@
     <div class="row">
         <!-- Upcoming Events Section -->
         <div class="card">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header">
                 <h4>Upcoming Events</h4>
             </div>
             <div class="card-body">
@@ -135,7 +146,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header bg-secondary text-white">
+                <div class="card-header">
                     <h4>About Us</h4>
                 </div>
                 <div class="card-body">
@@ -164,7 +175,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header bg-info text-white">
+                <div class="card-header">
                     <h4>Locations</h4>
                 </div>
                 <div class="card-body">
@@ -184,11 +195,13 @@
         </div>
     </div>
 
+
+
     <!-- Edit Contact Page Section -->
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-warning text-white">
+                <div class="card-header">
                     <h4>Edit Contact Page</h4>
                 </div>
                 <div class="card-body">

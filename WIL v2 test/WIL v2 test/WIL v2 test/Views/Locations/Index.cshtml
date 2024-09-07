@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> @ViewData["Title"] - Ladybird Foundation</title>
+    <title>@ViewData["Title"] - Ladybird Foundation</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WIL_V1.styles.css" asp-append-version="true" />
@@ -108,16 +108,16 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th></th>
+                        <th>Name</th>
+                        <th>Address</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>
-                                <!-- You can add edit/delete actions here if needed -->
-                            </td>
+                            <td>@item.Name</td>
+                            <td>@item.Address</td>
                         </tr>
                     }
                 </tbody>
