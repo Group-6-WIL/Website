@@ -3,6 +3,8 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav ml-auto custom-navbar-nav">
+
+
     <!-- Added ml-auto here -->
     @if (SignInManager.IsSignedIn(User))
     {
@@ -18,10 +20,10 @@
     else
     {
         <li class="nav-item">
-            <a class="btn btn-dark nav-link mx-2" id="registerLink" style="font-weight:bold; color:white; width:120px; height:40px;" asp-area="Identity" asp-page="/Account/Register">Register</a>
+            <a class="nav-link text-dark" id="registerLink" style="font-weight:bold;" asp-area="Identity" asp-page="/Account/Register">Register</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-dark nav-link mx-2" id="loginLink" style="font-weight:bold; color:white; width:120px; height:40px;" asp-area="Identity" asp-page="/Account/Login">Login</a>
+            <a class="nav-link text-dark" id="loginLink" style="font-weight:bold;" asp-area="Identity" asp-page="/Account/Login">Login</a>
         </li>
     }
 </ul>

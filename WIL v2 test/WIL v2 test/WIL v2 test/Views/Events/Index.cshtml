@@ -1,24 +1,100 @@
-﻿@model List<WIL_v2_test.Models.Events>
+﻿@model IEnumerable<WIL_v2_test.Models.Events>
 
-<h1 class="text-center">Events</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Candara', sans-serif; /* Modern font */
+        }
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-<div class="container">
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <img src="@(Url.Content("~/events/" + item.ImagePath) ?? Url.Content("~/images/default.png"))" class="card-img-top" alt="@item.Name" />
-                    <div class="card-body">
-                        <h5 class="card-title">@item.Name</h5>
-                        <p class="card-text">@item.Description</p>
-                        <p class="card-text">
-                            <small class="text-muted">Date: @item.Date.ToString("d MMM yyyy")</small>
-                        </p>
-                        <a href="@Url.Action("EventDetails", "Dashboard", new { id = item.Id })" class="btn btn-primary">More Info</a>
-                    </div>
+        .card-img-top {
+            max-height: 200px; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-red {
+            background-color: red;
+            color: white;
+        }
+
+            .btn-red:hover {
+                background-color: darkred;
+            }
+
+        .btn-search {
+            background-color: red;
+            color: white;
+        }
+
+            .btn-search:hover {
+                background-color: darkred;
+            }
+
+        .search-form {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-input {
+            width: 100%;
+            border-radius: 0;
+            border-right: 0;
+        }
+
+        .search-button {
+            border-radius: 0;
+            border-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Events</h1>
+
+        <!-- Search Form -->
+        <form method="get" action="@Url.Action("Index")" class="search-form">
+            <div class="input-group">
+                <input type="date" name="searchDate" class="form-control search-input" />
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-search search-button">Search</button>
                 </div>
             </div>
-        }
+        </form>
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="@(Url.Content("~/events/" + item.ImagePath) ?? Url.Content("~/images/default.png"))" class="card-img-top" alt="@item.Name" />
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <!-- Removed description -->
+                            <p class="card-text">
+                                <small class="text-muted">Date: @item.Date.ToString("d MMM yyyy")</small>
+                            </p>
+                            <a href="@Url.Action("EventDetails", "Dashboard", new { id = item.Id })" class="btn btn-red">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-</div>
+</body>
+</html>

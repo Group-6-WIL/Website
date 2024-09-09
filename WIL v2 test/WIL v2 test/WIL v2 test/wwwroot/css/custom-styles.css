@@ -10,6 +10,18 @@
     left: 0; /* Align dropdown to the left side */
 }
 
+.custom-red-button {
+    background-color: none; /* Red background */
+    color: white; /* White text */
+    border: red; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+    .custom-red-button:hover {
+        background-color: red; /* Darker shade of red on hover */
+    }
+
 .dropdown-item {
     font-size: 16px;
     padding: 10px 15px;
@@ -52,6 +64,18 @@
         margin-left: auto; /* Push login/register buttons to the right */
     }
 
+<style >
+.btn-red {
+    background-color: #d9534f; /* Red background */
+    color: white; /* White text */
+}
+
+.btn-red:hover {
+    background-color: #c9302c; /* Darker red on hover */
+    color: white;
+}
+
+</style >
 /* Additional styling for dark mode */
 @media (prefers-color-scheme: dark) {
     .dropdown-menu {

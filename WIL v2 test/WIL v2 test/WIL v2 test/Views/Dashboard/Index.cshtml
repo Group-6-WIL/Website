@@ -190,10 +190,67 @@
                         </div>
                         <button type="submit" class="btn btn-info">Add Location</button>
                     </form>
+                    <hr>
+                    <div id="locationList">
+                        @foreach (var location in Model.Locations)
+                        {
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <p><strong>Name:</strong> @location.Name</p>
+                                    <p><strong>Address:</strong> @location.Address</p>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=@Uri.EscapeDataString(location.Address)" target="_blank">
+                                        @location.Address
+                                    </a>
+                                </div>
+                                <div class="col-md-4 text-right">
+                                    <!-- Edit Button -->
+                                    <button type="button" class="btn btn-secondary mt-2" data-toggle="modal" data-target="#editLocationModal" data-id="@location.Id" data-name="@location.Name" data-address="@location.Address">Edit</button>
+                                    <!-- Delete Button -->
+                                    <form method="post" action="/Dashboard/DeleteLocation/@location.Id" class="d-inline">
+                                        <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Edit Location Modal -->
+    <div class="modal fade" id="editLocationModal" tabindex="-1" aria-labelledby="editLocationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="post" action="/Dashboard/EditLocation">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editLocationModalLabel">Edit Location</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="editLocationId" name="Id" />
+                        <div class="form-group">
+                            <label for="editLocationName">Location Name</label>
+                            <input type="text" class="form-control" id="editLocationName" name="locationName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editLocationAddress">Address</label>
+                            <input type="text" class="form-control" id="editLocationAddress" name="locationAddress" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 
@@ -368,5 +425,22 @@
                     modal.find('#editEventDescription').val(description);
                 });
             });
+
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Populate edit location modal with the location's data
+                $('#editLocationModal').on('show.bs.modal', function (event) {
+                    var button = $(event.relatedTarget);
+                    var id = button.data('id');
+                    var name = button.data('name');
+                    var address = button.data('address');
+
+                    var modal = $(this);
+                    modal.find('#editLocationId').val(id);
+                    modal.find('#editLocationName').val(name);
+                    modal.find('#editLocationAddress').val(address);
+                });
+            });
+ 
         </script>
     }

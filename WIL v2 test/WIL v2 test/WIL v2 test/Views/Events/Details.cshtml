@@ -5,11 +5,40 @@
 <head>
     <title>@Model.Name - Event Details</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for a more compact display */
+        .card {
+            max-width: 600px; /* Set a maximum width for the card */
+            margin: auto; /* Center the card horizontally */
+        }
+
+        .card-img-top {
+            height: 425px; /* Set a fixed height for the image */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+
+        .card-body {
+            padding: 1rem; /* Reduce padding inside the card body */
+        }
+
+        .card-title {
+            font-size: 1.5rem; /* Smaller font size for the title */
+        }
+
+        .card-text {
+            font-size: 0.875rem; /* Smaller font size for the text */
+        }
+
+        .btn {
+            font-size: 0.875rem; /* Smaller font size for the button */
+            padding: 0.5rem 1rem; /* Reduced padding for the button */
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-3">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-12">
                 <div class="card mb-3">
                     <img src="@(Url.Content("~/events/" + Model.ImagePath) ?? Url.Content("~/images/default.png"))" class="card-img-top" alt="@Model.Name">
                     <div class="card-body">
@@ -18,7 +47,7 @@
                         <p class="card-text">
                             <small class="text-muted">Date: @Model.Date.ToString("d MMM yyyy")</small>
                         </p>
-                        <a href="@Url.Action("Index", "Dashboard")" class="btn btn-secondary">Back to Events</a>
+                        <a href="@Url.Action("Index", "Events")" class="btn" style="background-color: #d9534f; color: white;">Back to Events</a>
                     </div>
                 </div>
             </div>
@@ -26,7 +55,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2024 Copyright:
         <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>

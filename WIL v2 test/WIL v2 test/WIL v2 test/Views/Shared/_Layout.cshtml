@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="~/css/custom-styles.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Inline CSS for footer positioning -->
+    <!-- Inline CSS for footer positioning and navigation styling -->
     <style>
         html, body {
             height: 100%;
             margin: 0;
+            font-family: 'Candara', sans-serif; /* Modern font */
         }
 
         body {
@@ -34,36 +35,76 @@
             text-align: center;
             padding: 10px;
         }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.7); /* Increased transparency */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern effect */
+        }
+
+        .navbar-nav .nav-link {
+            color: #000; /* Black color for text */
+            font-size: 16px; /* Modern, readable font size */
+            font-weight: 500; /* Medium weight for a sleek look */
+            padding: 10px 20px; /* More padding for larger clickable area */
+            transition: color 0.3s, background-color 0.3s; /* Smooth transition effect */
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #fff; /* White color on hover */
+                background-color: #d9534f; /* Red background on hover */
+                border-radius: 4px; /* Rounded corners for a modern look */
+            }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+            .navbar-toggler:focus {
+                outline: none; /* Remove focus outline */
+                box-shadow: none; /* Remove box shadow on focus */
+            }
+
+        .navbar-brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000; /* Black color for brand text */
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            @*  <a class="navbar-brand" href="@Url.Action("Index", "Home")">Ladybird Foundation</a> *@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white; font-size:large; font-weight: bold"
-                           data-white-icon="@(Url.Content("~/images/menu2 - white.png"))"
-                           data-black-icon="@(Url.Content("~/images/menu2 - black.png"))">
-                            <img id="menuIcon" src="~/images/menu2 - white.png" alt="Menu Icon" style="width: 35px; height: 35px; margin-right: 5px;" />
-                            Menu
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="@Url.Action("Index", "Home")">Home</a>
-                            <a class="dropdown-item" href="Events">Events</a>
-                            <a class="dropdown-item" href="AboutUs">About Us</a>
-                            <a class="dropdown-item" id="donationLink" href="Donation">Donations</a>
-                            <a class="dropdown-item" href="@Url.Action("Index", "Locations")">Location</a>
-                            <a class="dropdown-item" href="Contact">Contact Us</a>
-                            @if (User.IsInRole("Admin"))
-                            {
-                                <a class="dropdown-item" asp-controller="Dashboard">Dashboard</a>
-                            }
-                        </div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="AboutUs" asp-action="Index">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Donation" asp-action="Index">Donation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Locations" asp-action="Index">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">Contact Us</a>
+                    </li>
+                 
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index">Admin Dashboard</a>
+                        </li>
+                    }
                 </ul>
 
                 <!-- Login partial -->
@@ -80,8 +121,8 @@
     </div>
 
     <footer class="footer text-muted">
-        <div class="container">
-            | Contact us : | <img src="~/images/phone_icon.png" /> +27 79 076 2234 | Michelle
+        <div class="container" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            | Contact us : | <img src="~/images/phone_icon.png" style="width: 25px; height: auto;" /> +27 79 076 2234 | Michelle
         </div>
     </footer>
 
@@ -90,34 +131,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Script to change menu icon and text color based on page -->
+    <!-- Optional JavaScript to manage colors dynamically -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var currentPath = window.location.pathname;
-            var menuLink = document.getElementById("navbarDropdown");
-            var menuIcon = document.getElementById("menuIcon");
+            var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-            if (currentPath !== '/' && currentPath !== '/Home/Index') {
-                menuLink.style.color = "black";
-                menuIcon.src = menuLink.getAttribute("data-black-icon");
-            } else {
-                menuLink.style.color = "white";
-                menuIcon.src = menuLink.getAttribute("data-white-icon");
-            }
-
-            // Change the color of the register and login links
-            var registerLink = document.getElementById("registerLink");
-            var loginLink = document.getElementById("loginLink");
-
-            if (registerLink && loginLink) {
+            navLinks.forEach(link => {
                 if (currentPath !== '/' && currentPath !== '/Home/Index') {
-                    registerLink.style.color = registerLink.getAttribute("data-dark-color");
-                    loginLink.style.color = loginLink.getAttribute("data-dark-color");
+                    link.style.color = "black"; // Maintain black text color
                 } else {
-                    registerLink.style.color = registerLink.getAttribute("data-light-color");
-                    loginLink.style.color = loginLink.getAttribute("data-light-color");
+                    link.style.color = "black"; // Ensure text remains black
                 }
-            }
+            });
         });
     </script>
 
