@@ -8,72 +8,146 @@
     <title>Sign Up</title>
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f4f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .centered-image {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .card {
+            border: 2px solid #dc3545; /* Red border around the card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+
+        .form-group label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 14px;
+        }
+
+        .register-button {
+            background-color: #dc3545; /* Red background for the button */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .register-button:hover {
+                background-color: #b21f2d; /* Darker red on hover */
+                transform: translateY(-2px);
+            }
+
+        .text-muted {
+            font-size: 12px;
+        }
+
+        .custom-select {
             position: relative;
-            /* Style for form control focus */
-            .form-control:focus
         }
 
-        /* Style for form control focus */
-        .form-control:focus {
-            border-color: red; /* Change border color to red */
-            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25); /* Add a red shadow to make it more prominent */
+            .custom-select::after {
+                content: '▼';
+                position: absolute;
+                top: 50%;
+                right: 12px;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #6c757d;
+            }
+
+            .custom-select select {
+                appearance: none;
+                padding-right: 30px;
+            }
+
+        .form-group.text-center {
+            margin-top: 20px;
         }
 
+        .header {
+            text-align: center;
+        }
 
-
-
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #343a40;
+        }
     </style>
 </head>
 
 <body>
-    <h1 class="header">
-        <img src="~/images/ladybird-banner.png" class="centered-image" alt="Company Logo">
-    </h1>
-
     <div class="container">
+        <h1 class="header">
+            <img src="~/images/ladybird-banner.png" class="centered-image" alt="Company Logo">
+        </h1>
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-body">
                         <h2 class="text-center">@ViewData["Title"]</h2>
                         <form method="post">
                             <div class="row">
-                                <div class="col-md-5 offset-md-1">
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <h4>
-                                            <label asp-for="Input.FirstName">First Name</label>
-                                        </h4>
+                                        <label asp-for="Input.FirstName">First Name</label>
                                         <input asp-for="Input.FirstName" class="form-control" />
                                         <span asp-validation-for="Input.FirstName" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
-                                        <h4>
-                                            <label asp-for="Input.Surname">Last Name</label>
-                                        </h4>
+                                        <label asp-for="Input.Surname">Last Name</label>
                                         <input asp-for="Input.Surname" class="form-control" />
                                         <span asp-validation-for="Input.Surname" class="text-danger"></span>
                                     </div>
-                                </div>
-                                <div class="col-md-5 offset-md-1">
                                     <div class="form-group">
-                                        <h4>
-                                            <label asp-for="Input.Email">Email</label>
-                                        </h4>
+                                        <label asp-for="Input.Email">Email</label>
                                         <input asp-for="Input.Email" class="form-control" />
                                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                                     </div>
+                                </div>
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <h4>
-                                            <label asp-for="Input.Password">Password</label>
-                                        </h4>
+                                        <label asp-for="Input.Password">Password</label>
                                         <input asp-for="Input.Password" class="form-control" autocomplete="new-password" />
                                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
-                                        <h4>
-                                            <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                                        </h4>
+                                        <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                                         <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" />
                                         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                                     </div>
@@ -81,19 +155,20 @@
                                         <label for="role">Role</label>
                                         <div class="custom-select">
                                             <select id="role" name="Input.Role" class="form-control">
-                                                <option value="Admin">Admin</option>
                                                 <option value="User">User</option>
+                                                <option value="Admin">Admin</option>
                                             </select>
                                         </div>
                                     </div>
-                            </div>
-                            <div class="form-group text-center">
-                                <button id="registerSubmit" type="submit" class="register-button">Register</button>
+                                </div>
+                                <div class="form-group text-center col-12">
+                                    <button id="registerSubmit" type="submit" class="register-button">Register</button>
+                                </div>
                             </div>
                         </form>
-                        <div class="text-center">
-                            <small class="text-muted">Not an admin?</small><br>
-                            <a href="@Url.Action("Register", "Account")" class="text-info">Click here to register</a>
+                        <div class="text-center mt-3">
+                            <small class="text-muted">Already Registered?</small><br>
+                            <a href="/Identity/Account/Login" class="text-info">Click here to login</a>
                         </div>
                     </div>
                 </div>

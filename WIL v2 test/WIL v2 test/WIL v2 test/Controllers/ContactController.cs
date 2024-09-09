@@ -21,13 +21,10 @@ namespace WIL_v2_test.Controllers
 
         public IActionResult Index()
         {
-            var contact = _context.Contacts.FirstOrDefault();
+            var contacts = _context.Contacts.ToList(); // Get all contacts
             var model = new DashboardViewModel
             {
-                TeamMember = contact?.TeamMember ?? "Default Team Member",
-                Email = contact?.Email ?? "default@example.com",
-                Phone = contact?.Phone ?? "000-000-0000",
-                ContactUsImagePath = contact?.ImagePath
+                TeamContacts = contacts
             };
             return View(model);
         }

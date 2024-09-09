@@ -11,61 +11,94 @@
 
     .card {
         border-radius: .5rem;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 1000px;
+        margin: auto; /* Center the card */
     }
 
     .gradient-custom {
-        /* Add your gradient here */
         background: linear-gradient(to right, #FF0000, #000000);
+        color: white;
     }
 
     .img-fluid {
-        width: 80px;
+        width: 80px; /* Increase the size of the image */
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
     }
 
     .text-muted {
         color: #6c757d !important;
     }
+
+    .contact-card {
+        border: 1px solid #ddd;
+        border-radius: .5rem;
+        overflow: hidden;
+        /* Increase the card size */
+        max-width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+        .contact-card img {
+            border-radius: 50%;
+        }
+
+    .card-body {
+        padding: 2rem; /* Increase padding for more space */
+    }
+
+    .contact-card h5 {
+        font-size: 1.5rem; /* Increase font size for the name */
+    }
+
+    .contact-card h6 {
+        font-size: 1.2rem; /* Increase font size for section headings */
+    }
 </style>
+
 
 <section class="vh-100">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col col-lg-6 mb-4 mb-lg-0">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4 gradient-custom text-center text-white">
-                            <img src="~/team/@Model.ContactUsImagePath"
-                                 alt="Team Member Image"
-                                 class="img-fluid my-5" />
-                            <h5>@Model.TeamMember</h5>
-                           
-                            <i class="far fa-edit mb-5"></i>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-4">
-                                <h6>Information</h6>
-                                <hr class="mt-0 mb-4">
-                                <div class="row pt-1">
-                                    <div class="col-6 mb-3">
-                                        <h6>Email</h6>
-                                        <p class="text-muted">@Model.Email</p>
+            @foreach (var contact in Model.TeamContacts)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card card">
+                        <div class="row g-0">
+                            <div class="col-md-4 gradient-custom text-center text-white">
+                                <img src="~/team/@contact.ImagePath"
+                                     alt="Team Member Image"
+                                     class="img-fluid my-5" />
+                                <h5>@contact.TeamMember</h5>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-4">
+                                    <h6>Information</h6>
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-3">
+                                            <h6>Email</h6>
+                                            <p class="text-muted">@contact.Email</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Phone</h6>
+                                            <p class="text-muted">@contact.Phone</p>
+                                        </div>
                                     </div>
-                                    <div class="col-6 mb-3">
-                                        <h6>Phone</h6>
-                                        <p class="text-muted">@Model.Phone</p>
+                                    <div class="d-flex justify-content-start">
+                                        <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                                        <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                                        <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
                                     </div>
-                                </div>
-                                
-                                <div class="d-flex justify-content-start">
-                                    <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
-                                    <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
-                                    <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </section>

@@ -1,15 +1,17 @@
 ﻿@page
 @model LoginModel
 
-@{
-    ViewData["Title"] = "Log in";
-}
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Log in</title>
+    <title style="font-family: Candara">Log in</title>
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Candara', sans-serif; /* Modern font */
+        }
+
         body {
             background-color: #f8f9fa;
             position: relative;
@@ -21,49 +23,77 @@
             border-color: red; /* Change border color to red */
             box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25); /* Add a red shadow to make it more prominent */
         }
+
+        /* Floating tab styles */
+        .floating-tab {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px; /* Increased width */
+            background: white;
+            border-radius: 12px; /* Increased border-radius */
+            border: 3px solid red; /* Red border */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow */
+            padding: 40px; /* Increased padding */
+            z-index: 1000;
+        }
+
+            .floating-tab img {
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+            }
+
+        .login-button {
+            background-color: #dc3545; /* Red background for the button */
+            color: white;
+            border: none;
+            padding: 12px 24px; /* Increased padding */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .login-button:hover {
+                background-color: #b21f2d; /* Darker red on hover */
+            }
+
+        /* Center the image in the tab */
+        .tab-logo img {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
     <script src="~/js/dynamictextcolor.js"></script>  <!-- Link to the JavaScript file -->
 </head>
 <body>
-    <h1 class="header">
-        <img src="~/images/ladybird-banner.png" class="centered-image" alt="Company Logo">
-    </h1>
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="">
-                    <div class="">
-                        <h2 class="text-center">@ViewData["Title"]</h2>
-                    </div>
-                    <div>
-
-                        <form id="account" method="post">
-                            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                            <div class="form-group">
-                                <h4>Email</h4>
-                                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="">
-                                <span asp-validation-for="Input.Email" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <h4>Password</h4>
-                                <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="">
-                                <span asp-validation-for="Input.Password" class="text-danger"></span>
-                            </div>
-                            <div class="form-group text-center">
-                                <button id="login-submit" type="submit" class="login-button">Login</button>
-                            </div>
-                        </form>
-                        <div class="text-center">
-                            <small class="text-muted">Not an admin?</small><br>
-                            <a href="/Identity/Account/Register" class="text-info">Click here to register</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="floating-tab">
+        <div class="tab-logo">
+            <img src="~/images/ladybird-banner.png" alt="Company Logo">
         </div>
-    </div>
 
+        <h2 class="text-center">@ViewData["Title"]</h2>
+        <form id="account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-group">
+                <h4>Email</h4>
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="">
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h4>Password</h4>
+                <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="">
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group text-center">
+                <button id="login-submit" type="submit" class="login-button">Login</button>
+            </div>
+            <div class="text-center">
+                <small class="text-muted">Don't have an account?</small><br>
+                <a href="/Identity/Account/Register" class="text-info">Click here to register</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
 
