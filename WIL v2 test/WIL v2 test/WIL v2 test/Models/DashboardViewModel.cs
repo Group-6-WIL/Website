@@ -26,5 +26,7 @@ namespace WIL_v2_test.Models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string ContactUsImagePath { get; set; } // Path to the contact image
+
+        public DateTime LastUpdated { get; set; } // Add this property
     }
 }

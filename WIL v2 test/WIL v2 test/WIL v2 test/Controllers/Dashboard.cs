@@ -61,25 +61,36 @@ namespace WIL_v2_test.Controllers
         [HttpPost]
         public IActionResult EditEvent(int id, string eventName, DateTime eventDate, string eventDescription, List<IFormFile> eventImage)
         {
-            List<string> imagePaths = ProcessUploadedFiles(eventImage, "team");
-
-             var eventToUpdate = _context.Events.FirstOrDefault(e => e.Id == id);
-            if (eventToUpdate != null)
+            // Fetch the event to be updated
+            var eventToUpdate = _context.Events.FirstOrDefault(e => e.Id == id);
+            if (eventToUpdate == null)
             {
-                    _logger.LogError($"Event with id {id} not found.");
-                    return NotFound();
-                }
+                // Log the error and return a 404 response if the event is not found
+                _logger.LogError($"Event with id {id} not found.");
+                return NotFound();
+            }
+
+            // Process and assign image paths
+            List<string> imagePaths = ProcessUploadedFiles(eventImage, "events");
+            if (imagePaths.Any())
+            {
+                // Assuming you want to store multiple images, concatenate paths or handle as needed
+                eventToUpdate.ImagePath = string.Join(",", imagePaths);
+            }
+
             // Update event details
             eventToUpdate.Name = eventName;
             eventToUpdate.Date = eventDate;
             eventToUpdate.Description = eventDescription;
-           
-                _context.Events.Update(eventToUpdate);
-                _context.SaveChanges();
 
+            // Save changes to the database
+            _context.Events.Update(eventToUpdate);
+            _context.SaveChanges();
 
+            // Redirect to the index page or another appropriate action
             return RedirectToAction("Index");
         }
+
 
 
         [HttpPost]
@@ -152,8 +163,40 @@ namespace WIL_v2_test.Controllers
             return View(locations); // Pass locations to the view
         }
 
+        [HttpPost]
+        public IActionResult EditLocation(int id, string locationName, string locationAddress)
+        {
+            var locationToUpdate = _context.Locations.FirstOrDefault(l => l.Id == id);
+            if (locationToUpdate == null)
+            {
+                _logger.LogError($"Location with id {id} not found.");
+                return NotFound();
+            }
 
+            locationToUpdate.Name = locationName;
+            locationToUpdate.Address = locationAddress;
 
+            _context.Locations.Update(locationToUpdate);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult DeleteLocation(int id)
+        {
+            var locationToDelete = _context.Locations.Find(id);
+            if (locationToDelete == null)
+            {
+                _logger.LogError($"Location with id {id} not found.");
+                return NotFound();
+            }
+
+            _context.Locations.Remove(locationToDelete);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
 
         [HttpPost]

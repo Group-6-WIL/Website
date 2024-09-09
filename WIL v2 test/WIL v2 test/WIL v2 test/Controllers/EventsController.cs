@@ -18,11 +18,25 @@ namespace WIL_v2_test.Controllers
         }
 
         // GET: Events
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(DateTime? searchDate)
         {
-            var events = await _context.Events.ToListAsync();
-            return View(events);
+            var events = _context.Events.AsQueryable();
+
+            // Apply date filtering if searchDate is provided
+            if (searchDate.HasValue)
+            {
+                events = events.Where(e => e.Date.Date == searchDate.Value.Date);
+            }
+
+            // Order events by date
+            events = events.OrderBy(e => e.Date);
+
+            // Fetch the filtered and sorted events
+            var eventList = await events.ToListAsync();
+
+            return View(eventList);
         }
+
 
         // GET: Events/Create
         public IActionResult Create()

@@ -21,7 +21,8 @@ namespace WIL_v2_test.Controllers
             {
                 AboutUsContent = aboutUs?.Content ?? "Default About Us content",
                 MissionContent = aboutUs?.Mission ?? "Default Mission content",
-                ImagePath = aboutUs?.ImagePath
+                ImagePath = aboutUs?.ImagePath,
+                LastUpdated = DateTime.Now // Set the current time
             };
             return View(model);
         }

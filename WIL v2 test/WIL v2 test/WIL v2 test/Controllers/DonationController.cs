@@ -2,9 +2,11 @@
 using WIL_v2_test.Data;
 using WIL_v2_test.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WIL_v2_test.Controllers
 {
+    [Authorize]
     public class DonationController : Controller
     {
         private readonly ApplicationDbContext _context;
