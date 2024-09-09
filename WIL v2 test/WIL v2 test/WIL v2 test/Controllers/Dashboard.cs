@@ -154,6 +154,8 @@ namespace WIL_v2_test.Controllers
 
 
 
+
+
         [HttpPost]
         public IActionResult EditContact(int id, string teamMember, string email, string phone, List<IFormFile> teamMemberImage)
         {
@@ -162,6 +164,7 @@ namespace WIL_v2_test.Controllers
             var contact = _context.Contacts.FirstOrDefault(c => c.Id == id);
             if (contact != null)
             {
+                // Update existing contact
                 contact.TeamMember = teamMember;
                 contact.Email = email;
                 contact.Phone = phone;
@@ -170,16 +173,26 @@ namespace WIL_v2_test.Controllers
                     contact.ImagePath = string.Join(";", imagePaths);
                 }
                 _context.Contacts.Update(contact);
-                _context.SaveChanges();
             }
             else
             {
-                _logger.LogError($"Contact with ID {id} not found.");
-                return NotFound();
+                // Add new contact
+                contact = new Contact
+                {
+                    TeamMember = teamMember,
+                    Email = email,
+                    Phone = phone,
+                    ImagePath = string.Join(";", imagePaths)
+                };
+                _context.Contacts.Add(contact);
             }
+
+            _context.SaveChanges();
 
             return RedirectToAction("Index");
         }
+
+
 
         [HttpPost]
         public IActionResult DeleteContact(int id)

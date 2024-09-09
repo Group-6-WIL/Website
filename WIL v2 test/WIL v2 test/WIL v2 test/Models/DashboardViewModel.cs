@@ -18,6 +18,7 @@ namespace WIL_v2_test.Models
 
         // Team Contacts properties
         public IEnumerable<Contact> TeamContacts { get; set; } // Change the type to Contact
+        public List<Location> Location { get; set; } = new List<Location>();
 
 
         // Contact Us properties for editing a specific contact
