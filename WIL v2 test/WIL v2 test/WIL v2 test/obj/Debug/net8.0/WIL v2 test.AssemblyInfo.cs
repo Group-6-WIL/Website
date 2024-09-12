@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WIL v2 test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fa7d3133e0f8edbb33af5efa285b10c9bec509c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a42001694702303d36007b6bd5e1ba0c4a109e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("WIL v2 test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WIL v2 test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
