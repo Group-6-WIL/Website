@@ -123,20 +123,20 @@ namespace WIL_v2_test.Controllers
 
 
         [HttpPost]
-        public IActionResult EditAboutUs(string aboutUsContent, string missionContent, List<IFormFile> aboutUsImage)
+        public IActionResult EditAboutUs(string aboutUsContent, string missionContent)
         {
-            List<string> imagePaths = ProcessUploadedFiles(aboutUsImage, "images");
+
 
             var aboutUs = _context.AboutUs.FirstOrDefault();
             if (aboutUs != null)
             {
                 aboutUs.Content = aboutUsContent;
                 aboutUs.Mission = missionContent;
-                aboutUs.ImagePath = string.Join(";", imagePaths);
+
             }
             else
             {
-                _context.AboutUs.Add(new AboutUs { Content = aboutUsContent, Mission = missionContent, ImagePath = string.Join(";", imagePaths) });
+                _context.AboutUs.Add(new AboutUs { Content = aboutUsContent, Mission = missionContent});
             }
             _context.SaveChanges();
 
