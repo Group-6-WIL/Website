@@ -14,10 +14,12 @@ namespace WIL_v2_test.Controllers
         public DonationController(ApplicationDbContext context)
         {
             _context = context;
+
         }
 
         public IActionResult Index()
         {
+            
             var donations = _context.Donations.ToList();
             return View(donations);
         }
