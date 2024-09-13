@@ -99,7 +99,8 @@
                 <div class="text-dark">
                     <h1 class="mb-3">Donation Page</h1>
                     <p class="card-text">This is the donation page.</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                    <p id="lastUpdated" class="card-text"></p>
+
                     <a id="viewDetailsBtn" data-mdb-ripple-init class="btn btn-outline-dark btn-lg btn-custom" href="#!" role="button">View Details</a>
                 </div>
             </div>
@@ -133,8 +134,14 @@
             closeDetailsBtn.addEventListener('click', function () {
                 bankingDetails.style.display = 'none'; // Hide the banking details
             });
+
+            // Set the current date and time in the "Last updated" text
+            var lastUpdatedElement = document.getElementById('lastUpdated');
+            var currentDate = new Date();
+            lastUpdatedElement.textContent = "Last updated: " + currentDate.toLocaleString();
         });
     </script>
+
 </body>
 </html>
 
