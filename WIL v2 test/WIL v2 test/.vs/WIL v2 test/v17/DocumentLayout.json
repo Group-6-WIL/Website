@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|d:\\varsity college\\#year 3\\3.2\\xbcad7319 - work integrated learning\\website\\website\\wil v2 test\\wil v2 test\\wil v2 test\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|d:\\varsity college\\#year 3\\3.2\\xbcad7319 - work integrated learning\\website\\website\\wil v2 test\\wil v2 test\\wil v2 test\\views\\donation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\donation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|d:\\varsity college\\#year 3\\3.2\\xbcad7319 - work integrated learning\\website\\website\\wil v2 test\\wil v2 test\\wil v2 test\\controllers\\donationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\controllers\\donationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|d:\\varsity college\\#year 3\\3.2\\xbcad7319 - work integrated learning\\website\\website\\wil v2 test\\wil v2 test\\wil v2 test\\controllers\\aboutus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\controllers\\aboutus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|d:\\varsity college\\#year 3\\3.2\\xbcad7319 - work integrated learning\\website\\website\\wil v2 test\\wil v2 test\\wil v2 test\\views\\aboutus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\views\\aboutus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|d:\\varsity college\\#year 3\\3.2\\xbcad7319 - work integrated learning\\website\\website\\wil v2 test\\wil v2 test\\wil v2 test\\controllers\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2547715-A5E1-4976-8B4D-EC665F83710F}|WIL v2 test\\WIL v2 test.csproj|solutionrelative:wil v2 test\\controllers\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +47,68 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WIL v2 test\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WIL v2 test\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAmwH0AAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T10:39:44.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DonationController.cs",
+              "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Controllers\\DonationController.cs",
+              "RelativeDocumentMoniker": "WIL v2 test\\Controllers\\DonationController.cs",
+              "ToolTip": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Controllers\\DonationController.cs",
+              "RelativeToolTip": "WIL v2 test\\Controllers\\DonationController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwBYAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T07:38:36.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AboutUs.cs",
+              "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Controllers\\AboutUs.cs",
+              "RelativeDocumentMoniker": "WIL v2 test\\Controllers\\AboutUs.cs",
+              "ToolTip": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Controllers\\AboutUs.cs",
+              "RelativeToolTip": "WIL v2 test\\Controllers\\AboutUs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T07:38:30.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Donation\\Index.cshtml",
+              "RelativeDocumentMoniker": "WIL v2 test\\Views\\Donation\\Index.cshtml",
+              "ToolTip": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Donation\\Index.cshtml",
+              "RelativeToolTip": "WIL v2 test\\Views\\Donation\\Index.cshtml",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAmwI8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T07:38:17.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\AboutUs\\Index.cshtml",
+              "RelativeDocumentMoniker": "WIL v2 test\\Views\\AboutUs\\Index.cshtml",
+              "ToolTip": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\AboutUs\\Index.cshtml",
+              "RelativeToolTip": "WIL v2 test\\Views\\AboutUs\\Index.cshtml",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHsAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T07:38:04.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Controllers\\Dashboard.cs",
               "RelativeDocumentMoniker": "WIL v2 test\\Controllers\\Dashboard.cs",
@@ -34,12 +116,11 @@
               "RelativeToolTip": "WIL v2 test\\Controllers\\Dashboard.cs",
               "ViewState": "AQIAAHIAAAAAAAAAAAAiwIwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T08:38:16.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T08:38:16.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Views\\Dashboard\\Index.cshtml",
@@ -47,12 +128,11 @@
               "RelativeToolTip": "WIL v2 test\\Views\\Dashboard\\Index.cshtml",
               "ViewState": "AQIAAJkAAAAAAAAAAAAAAKUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T08:36:21.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T08:36:21.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\VARSITY COLLEGE\\#YEAR 3\\3.2\\XBCAD7319 - WORK INTEGRATED LEARNING\\Website\\Website\\WIL v2 test\\WIL v2 test\\WIL v2 test\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -60,8 +140,7 @@
               "RelativeToolTip": "WIL v2 test\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ViewState": "AQIAANAAAAAAAAAAAAAmwIoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T08:01:13.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T08:01:13.104Z"
             }
           ]
         }
