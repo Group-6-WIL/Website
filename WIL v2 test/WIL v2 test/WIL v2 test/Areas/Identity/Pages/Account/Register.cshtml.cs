@@ -75,6 +75,8 @@ namespace WIL_v2_test.Areas.Identity.Pages.Account
             public string Role { get; set; } // Property to hold the selected role
         }
 
+
+
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
@@ -85,6 +87,23 @@ namespace WIL_v2_test.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            // Check if email already exists
+            var existingUser = await _userManager.FindByEmailAsync(Input.Email);
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Input.Email", "This email is already registered.");
+                return Page();
+            }
+
+            // Validate role
+            var allowedRoles = new[] { "User", "Admin" };
+            if (!allowedRoles.Contains(Input.Role))
+            {
+                ModelState.AddModelError("Input.Role", "Invalid role selected.");
+                return Page();
+            }
+
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
@@ -93,9 +112,10 @@ namespace WIL_v2_test.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    // Assign the selected role to the user
+                    // Assign role to user
                     await _userManager.AddToRoleAsync(user, Input.Role);
 
+                    // Email confirmation token generation
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
@@ -117,15 +137,18 @@ namespace WIL_v2_test.Areas.Identity.Pages.Account
                         return LocalRedirect(returnUrl);
                     }
                 }
+
+                // Add errors to ModelState
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            // Redisplay the form if something fails
             return Page();
         }
+
     }
 
 }
