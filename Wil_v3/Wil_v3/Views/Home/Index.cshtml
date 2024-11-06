@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<body style="background-color: #e03c31; position: relative; overflow: hidden; height: 100vh; width: 100vw;">
+    <div class="d-flex justify-content-center align-items-center" style="height: 40vh;">
+        <img src="~/images/ladybirdlogo-final.png" alt="LadyBirdLogo.png">
+    </div>
+    <div class="text-center" style="height: 40vh;">
+        <h1 style="color:white; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">LADY</h1>
+        <h1 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">BIRD</h1>
+        <br>
+        <h2 style="color:black; font-family:Candara; font-weight:bold;">FOUNDATION</h2>
+        <br>
+        <h3 style="color:white; font-family:Candara">Raising Funds to Enhance the Lives of Others</h3>
+
+
+    </div>
+    <div class="ladybug-pattern">
+        <div class="dot" style="top: 5%; left: 5%;"></div>
+        <div class="dot" style="top: 10%; left: 85%;"></div>
+        <div class="dot" style="top: 30%; left: 30%;"></div>
+        <div class="dot" style="top: 20%; left: 55%;"></div>
+        <div class="dot" style="top: 75%; left: 70%;"></div>
+        <div class="dot" style="top: 85%; left: 15%;"></div>
+    </div>
+</body>
+<style>
+    .ladybug-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .dot {
+        position: absolute;
+        width: 15vw; /* Adjust the size of the dots relative to viewport */
+        height: 15vw; /* Adjust the size of the dots relative to viewport */
+        background-color: #000;
+        border-radius: 50%;
+    }
+</style>

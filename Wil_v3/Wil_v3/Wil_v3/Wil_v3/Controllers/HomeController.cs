@@ -1,0 +1,38 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+using Wil_v3.Models;
+
+namespace Wil_v3.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult AdminDashboard()
+        {
+            return View(); // Ensure an AdminDashboard.cshtml view exists
+        }
+
+    }
+}

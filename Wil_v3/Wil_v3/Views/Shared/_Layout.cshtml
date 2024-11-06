@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Ladybird Foundation</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WIL_V1.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/custom-styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Inline CSS for footer positioning and navigation styling -->
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Candara', sans-serif; /* Modern font */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1; /* Allows container to expand and push footer down */
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.7); /* Increased transparency */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern effect */
+        }
+
+        .navbar-nav .nav-link {
+            color: #000; /* Black color for text */
+            font-size: 16px; /* Modern, readable font size */
+            font-weight: 500; /* Medium weight for a sleek look */
+            padding: 10px 20px; /* More padding for larger clickable area */
+            transition: color 0.3s, background-color 0.3s; /* Smooth transition effect */
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #fff; /* White color on hover */
+                background-color: #d9534f; /* Red background on hover */
+                border-radius: 4px; /* Rounded corners for a modern look */
+            }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+            .navbar-toggler:focus {
+                outline: none; /* Remove focus outline */
+                box-shadow: none; /* Remove box shadow on focus */
+            }
+
+        .navbar-brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000; /* Black color for brand text */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            @*  <a class="navbar-brand" href="@Url.Action("Index", "Home")">Ladybird Foundation</a> *@
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="AboutUs" asp-action="Index">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Donation" asp-action="Index">Donation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Locations" asp-action="Index">Locations</a>
+                    </li>
+
+                 @*    @if (User.IsInRole("Admin"))
+                    { *@
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index">Admin Dashboard</a>
+                        </li>
+                    @* } *@
+
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Aligns these items to the right -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                    </ul>
+
+                 
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="container" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            | Contact us : | <img src="~/images/phone_icon.png" style="width: 25px; height: auto;" /> +27 79 076 2234 | Michelle |
+            <a href="https://popia.co.za/" target="_blank" style="color:WHITE; text-decoration: underline;">POPIA</a>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Optional JavaScript to manage colors dynamically -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentPath = window.location.pathname;
+            var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+            navLinks.forEach(link => {
+                if (currentPath !== '/' && currentPath !== '/Home/Index') {
+                    link.style.color = "black"; // Maintain black text color
+                } else {
+                    link.style.color = "black"; // Ensure text remains black
+                }
+            });
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

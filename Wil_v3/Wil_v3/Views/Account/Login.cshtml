@@ -1,0 +1,98 @@
+﻿@model Wil_v3.Models.LoginModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title style="font-family: Candara">Log in</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Candara', sans-serif; /* Modern font */
+        }
+
+        body {
+            background-color: #f8f9fa;
+            position: relative;
+            color: black; /* Default text color */
+        }
+
+        /* Style for form control focus */
+        .form-control:focus {
+            border-color: red; /* Change border color to red */
+            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25); /* Add a red shadow to make it more prominent */
+        }
+
+        /* Floating tab styles */
+        .floating-tab {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px; /* Increased width */
+            background: white;
+            border-radius: 12px; /* Increased border-radius */
+            border: 3px solid red; /* Red border */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow */
+            padding: 40px; /* Increased padding */
+            z-index: 1000;
+        }
+
+            .floating-tab img {
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+            }
+
+        .login-button {
+            background-color: #dc3545; /* Red background for the button */
+            color: white;
+            border: none;
+            padding: 12px 24px; /* Increased padding */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .login-button:hover {
+                background-color: #b21f2d; /* Darker red on hover */
+            }
+
+        /* Center the image in the tab */
+        .tab-logo img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="~/js/dynamictextcolor.js"></script>  <!-- Link to the JavaScript file -->
+</head>
+<body>
+    <div class="floating-tab">
+        <div class="tab-logo">
+            <img src="~/images/ladybird-banner.png" alt="Company Logo">
+        </div>
+
+        <h2 class="text-center">@ViewData["Title"]</h2>
+        <form id="account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-group">
+                <h4>Email</h4>
+                <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" placeholder="">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h4>Password</h4>
+                <input asp-for="Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group text-center">
+                <button id="login-submit" type="submit" class="login-button">Login</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,138 @@
+﻿@model Wil_v3.Models.DashboardViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .main-image {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            max-width: 900px; /* Adjusted width to make the carousel slightly larger */
+            margin: 0 auto; /* Center the carousel */
+        }
+
+        .carousel-inner img {
+            height: 500px; /* Adjusted height for larger images */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .additional-cards {
+            margin-top: 20px;
+        }
+
+            .additional-cards .card {
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+
+            .additional-cards .card-img-top {
+                height: 200px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+        .about-content {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="@Url.Content("~/images/ladybird-about1.jpg")" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="@Url.Content("~/images/ladybird-about2.jpg")" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="@Url.Content("~/images/ladybird-about3.jpg")" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="@Url.Content("~/images/ladybird-about4.jpg")" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+             </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="@Url.Content("~/images/1.jpg")" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="@Url.Content("~/images/3.jpg")" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="@Url.Content("~/images/4.jpg")" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- About Content Section -->
+    <div class="row about-content">
+        <div class="col-12">
+            <h2>About Us</h2>
+            <p>@Model.AboutUsContent</p>
+            <h2 class="mt-4">Our Mission</h2>
+            <p>@Model.MissionContent</p>
+            <!-- Display the dynamic last updated time -->
+            <p class="mt-4">Last updated @Model.LastUpdated.ToString("f")</p>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+</body>
+</html>

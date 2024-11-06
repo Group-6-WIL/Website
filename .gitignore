@@ -1,2 +1,6 @@
 
-WIL v2 test/WIL v2 test/.vs/WIL v2 test/FileContentIndex/43b055a1-6b1b-43d9-b8ff-f411305a3150.vsidx
+WIL v2 test/WIL v2 test/.vs/WIL v2 test/FileContentIndex/43b055a1-6b1b-43d9-b8ff-f411305a3150.vsidx,
+
+# Ignore sensitive files
+Wil_v3/ladybird-foundation-firebase-adminsdk-2m5sm-816785b06c.json
+

@@ -1,0 +1,565 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Wil_v3.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Wil_v3.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\06903c7d-c9cb-4d8b-9720-5747dc05f584_light.png",
+      "PackagePath": "staticwebassets\\Images\\06903c7d-c9cb-4d8b-9720-5747dc05f584_light.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\0c536b43-6cb4-43be-9730-c2118537a92d_aboutusLadybird.jpeg",
+      "PackagePath": "staticwebassets\\Images\\0c536b43-6cb4-43be-9730-c2118537a92d_aboutusLadybird.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\0e17f7d8-3634-42fb-bb09-f3fdba414aaf_IMG_3420.JPEG",
+      "PackagePath": "staticwebassets\\Images\\0e17f7d8-3634-42fb-bb09-f3fdba414aaf_IMG_3420.JPEG"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\1.jpg",
+      "PackagePath": "staticwebassets\\Images\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\123e3ad4-cbee-44f9-98cb-7703c1680585_stationLadybird.jpg",
+      "PackagePath": "staticwebassets\\Images\\123e3ad4-cbee-44f9-98cb-7703c1680585_stationLadybird.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\13b9ce39-72a4-43cd-9465-e5842c45f5c3_stationLadybird.jpg",
+      "PackagePath": "staticwebassets\\Images\\13b9ce39-72a4-43cd-9465-e5842c45f5c3_stationLadybird.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\1626b2d5-9cd4-4212-a3fe-64433d8e6fdd_light.png",
+      "PackagePath": "staticwebassets\\Images\\1626b2d5-9cd4-4212-a3fe-64433d8e6fdd_light.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\2.jpg",
+      "PackagePath": "staticwebassets\\Images\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\2486271d-9381-4044-88fa-586696e44589_hello feb.png",
+      "PackagePath": "staticwebassets\\Images\\2486271d-9381-4044-88fa-586696e44589_hello feb.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\3.jpg",
+      "PackagePath": "staticwebassets\\Images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\3072ee2d-3c0d-4a35-8a00-8ec31f923f25_2.png",
+      "PackagePath": "staticwebassets\\Images\\3072ee2d-3c0d-4a35-8a00-8ec31f923f25_2.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\3a2b5287-389b-479d-b06d-675e08f99229_2.png",
+      "PackagePath": "staticwebassets\\Images\\3a2b5287-389b-479d-b06d-675e08f99229_2.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\4.jpg",
+      "PackagePath": "staticwebassets\\Images\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\408ace96-c5cc-47c5-ac8e-803c9f82d0cc_3.png",
+      "PackagePath": "staticwebassets\\Images\\408ace96-c5cc-47c5-ac8e-803c9f82d0cc_3.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\5949a3ff-1cb7-4073-b916-e03ffca55d50_3.png",
+      "PackagePath": "staticwebassets\\Images\\5949a3ff-1cb7-4073-b916-e03ffca55d50_3.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\59ae18a5-d648-42e6-8ec6-ddcfef4e600c_hello jan.png",
+      "PackagePath": "staticwebassets\\Images\\59ae18a5-d648-42e6-8ec6-ddcfef4e600c_hello jan.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\5ffb2596-3a37-46a7-b562-633ac449f2ab_stationLadybird.jpg",
+      "PackagePath": "staticwebassets\\Images\\5ffb2596-3a37-46a7-b562-633ac449f2ab_stationLadybird.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\62be9177-ee55-401b-9922-3adf46280223_2.png",
+      "PackagePath": "staticwebassets\\Images\\62be9177-ee55-401b-9922-3adf46280223_2.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\6e68b890-b384-4d02-b7bb-98b7e7700826_3.png",
+      "PackagePath": "staticwebassets\\Images\\6e68b890-b384-4d02-b7bb-98b7e7700826_3.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\7a75de1a-c706-4f8a-9fe3-48e3885231f0_stationLadybird.jpg",
+      "PackagePath": "staticwebassets\\Images\\7a75de1a-c706-4f8a-9fe3-48e3885231f0_stationLadybird.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\907facda-41f1-45a7-8537-312883866e56_IMG_3420.JPEG",
+      "PackagePath": "staticwebassets\\Images\\907facda-41f1-45a7-8537-312883866e56_IMG_3420.JPEG"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\9dbd9960-329c-416d-81f0-4be11fd4056b_2.png",
+      "PackagePath": "staticwebassets\\Images\\9dbd9960-329c-416d-81f0-4be11fd4056b_2.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\LadyBird-banner.png",
+      "PackagePath": "staticwebassets\\Images\\LadyBird-banner.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\LadyBirdLogo-final.png",
+      "PackagePath": "staticwebassets\\Images\\LadyBirdLogo-final.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\ad1fa682-76a5-41a5-944c-0e8a47b6bb0e_school-shoes.jpg",
+      "PackagePath": "staticwebassets\\Images\\ad1fa682-76a5-41a5-944c-0e8a47b6bb0e_school-shoes.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\aedba0de-dacf-4d13-b614-5513f0d76386_shoesK.jpeg",
+      "PackagePath": "staticwebassets\\Images\\aedba0de-dacf-4d13-b614-5513f0d76386_shoesK.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\bfbcb961-77cf-41b9-8be2-e5dea5df3d62_2.png",
+      "PackagePath": "staticwebassets\\Images\\bfbcb961-77cf-41b9-8be2-e5dea5df3d62_2.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\c69cc520-65cc-4f74-a107-533d5da5cc5f_LadybirdinAct.jpg",
+      "PackagePath": "staticwebassets\\Images\\c69cc520-65cc-4f74-a107-533d5da5cc5f_LadybirdinAct.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\d5a6f19c-5b64-4871-a3e7-ce298acd82e5_3.png",
+      "PackagePath": "staticwebassets\\Images\\d5a6f19c-5b64-4871-a3e7-ce298acd82e5_3.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\e12a348d-cbcb-4250-9eb8-c9121957030d_light.png",
+      "PackagePath": "staticwebassets\\Images\\e12a348d-cbcb-4250-9eb8-c9121957030d_light.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\facebook_social_iconfinder.png",
+      "PackagePath": "staticwebassets\\Images\\facebook_social_iconfinder.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\ff168411-8c07-4205-9f42-53dac0d442f3_Logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\ff168411-8c07-4205-9f42-53dac0d442f3_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\ladybird-about1.jpg",
+      "PackagePath": "staticwebassets\\Images\\ladybird-about1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\ladybird-about2.jpg",
+      "PackagePath": "staticwebassets\\Images\\ladybird-about2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\ladybird-about3.jpg",
+      "PackagePath": "staticwebassets\\Images\\ladybird-about3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\ladybird-about4.jpg",
+      "PackagePath": "staticwebassets\\Images\\ladybird-about4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\ladybirdmen.jpeg",
+      "PackagePath": "staticwebassets\\Images\\ladybirdmen.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\mail_iconfinder.png",
+      "PackagePath": "staticwebassets\\Images\\mail_iconfinder.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\menu2 - black.png",
+      "PackagePath": "staticwebassets\\Images\\menu2 - black.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\menu2 - white.png",
+      "PackagePath": "staticwebassets\\Images\\menu2 - white.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\phone_icon.png",
+      "PackagePath": "staticwebassets\\Images\\phone_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\phone_iconfinder.png",
+      "PackagePath": "staticwebassets\\Images\\phone_iconfinder.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\Images\\umbrellabug.jpg",
+      "PackagePath": "staticwebassets\\Images\\umbrellabug.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\8.JPEG",
+      "PackagePath": "staticwebassets\\events\\8.JPEG"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\Beats the office! People share enviable work-from-home set-ups.jpeg",
+      "PackagePath": "staticwebassets\\events\\Beats the office! People share enviable work-from-home set-ups.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\Free iPad Wallpapers _) April 2023 \uD83D\uDCAB @flaurieco.jpeg",
+      "PackagePath": "staticwebassets\\events\\Free iPad Wallpapers _) April 2023 \uD83D\uDCAB @flaurieco.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\IMG_2240.JPEG",
+      "PackagePath": "staticwebassets\\events\\IMG_2240.JPEG"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\aesthetic study sessions.jpeg",
+      "PackagePath": "staticwebassets\\events\\aesthetic study sessions.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\download (1).jpeg",
+      "PackagePath": "staticwebassets\\events\\download (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\download (2).jpeg",
+      "PackagePath": "staticwebassets\\events\\download (2).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\events\\download.jpeg",
+      "PackagePath": "staticwebassets\\events\\download.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\2c5628d0-2a87-4c94-aff7-78deb65f7faf_Logo.jpg",
+      "PackagePath": "staticwebassets\\team\\2c5628d0-2a87-4c94-aff7-78deb65f7faf_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\3f9f5981-d488-4f2f-badd-9b2cee67876a_Logo.jpg",
+      "PackagePath": "staticwebassets\\team\\3f9f5981-d488-4f2f-badd-9b2cee67876a_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\47a8938a-d309-4696-8c21-fe6c45705504_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\47a8938a-d309-4696-8c21-fe6c45705504_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\4a3b3853-c08b-4af7-acf1-b83920f6d9e9_uber drop off.jpg",
+      "PackagePath": "staticwebassets\\team\\4a3b3853-c08b-4af7-acf1-b83920f6d9e9_uber drop off.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\5fb0e93c-e1af-436f-a1fc-03ea706387bf_IMG_3420.JPEG",
+      "PackagePath": "staticwebassets\\team\\5fb0e93c-e1af-436f-a1fc-03ea706387bf_IMG_3420.JPEG"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\68534825-d635-45f7-900b-1c4514757c72_WhatsApp Image 2024-07-22 at 16.12.23_3ea9afe9.jpg",
+      "PackagePath": "staticwebassets\\team\\68534825-d635-45f7-900b-1c4514757c72_WhatsApp Image 2024-07-22 at 16.12.23_3ea9afe9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\6965ce22-ad0d-4ce8-906f-8ae92099aa9d_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\6965ce22-ad0d-4ce8-906f-8ae92099aa9d_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\6c762d70-6668-416c-8507-ce3b30238d18_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\6c762d70-6668-416c-8507-ce3b30238d18_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\720ad523-b5c6-4727-b562-e95387917cb7_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\720ad523-b5c6-4727-b562-e95387917cb7_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\7f39e29f-42b8-45ee-9032-0265fe51ae79_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\7f39e29f-42b8-45ee-9032-0265fe51ae79_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\7fedf375-81df-452f-9fe0-eb5d0e2a9e79_Logo.jpg",
+      "PackagePath": "staticwebassets\\team\\7fedf375-81df-452f-9fe0-eb5d0e2a9e79_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\95dc1022-989f-470b-b307-de6996d75866_2.png",
+      "PackagePath": "staticwebassets\\team\\95dc1022-989f-470b-b307-de6996d75866_2.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\98d66c8f-67bc-4f00-8d7f-bb9efa174317_Logo.jpg",
+      "PackagePath": "staticwebassets\\team\\98d66c8f-67bc-4f00-8d7f-bb9efa174317_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\9d53eb96-ad00-406c-b0ca-e83eeb52b2c1_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\9d53eb96-ad00-406c-b0ca-e83eeb52b2c1_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\9f8ececb-2881-4afd-ba77-ecc556cb39ca_download.jpeg",
+      "PackagePath": "staticwebassets\\team\\9f8ececb-2881-4afd-ba77-ecc556cb39ca_download.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\b0300119-8914-4f9b-a6e0-3e088f030be9_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\b0300119-8914-4f9b-a6e0-3e088f030be9_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\b23a384c-cc2c-44e6-bd93-be2c021fe779_Logo.jpg",
+      "PackagePath": "staticwebassets\\team\\b23a384c-cc2c-44e6-bd93-be2c021fe779_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\b2d0a485-4384-4e88-94d6-bc66c3fc3e10_Michelle.jpg",
+      "PackagePath": "staticwebassets\\team\\b2d0a485-4384-4e88-94d6-bc66c3fc3e10_Michelle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\c617b779-07aa-4785-bd42-5856ab7b31b4_download.jpeg",
+      "PackagePath": "staticwebassets\\team\\c617b779-07aa-4785-bd42-5856ab7b31b4_download.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\df32d37b-6748-443a-85ff-03721fd05dd5_1.png",
+      "PackagePath": "staticwebassets\\team\\df32d37b-6748-443a-85ff-03721fd05dd5_1.png"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\dfc2cfc6-05d4-40aa-9348-be0287254447_Logo.jpg",
+      "PackagePath": "staticwebassets\\team\\dfc2cfc6-05d4-40aa-9348-be0287254447_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\e817cd60-ae73-4a39-b062-5b2dfaec3cd1_Logo.jpg",
+      "PackagePath": "staticwebassets\\team\\e817cd60-ae73-4a39-b062-5b2dfaec3cd1_Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\f4d5b647-47a1-4797-af7f-cb34404c2bdb_elle.jpg",
+      "PackagePath": "staticwebassets\\team\\f4d5b647-47a1-4797-af7f-cb34404c2bdb_elle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\wwwroot\\team\\f4f2760b-4208-4f74-b226-4f10067bed83_Natasha.jpg",
+      "PackagePath": "staticwebassets\\team\\f4f2760b-4208-4f74-b226-4f10067bed83_Natasha.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Wil_v3.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Wil_v3.props",
+      "PackagePath": "build\\Wil_v3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Wil_v3.props",
+      "PackagePath": "buildMultiTargeting\\Wil_v3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Wil_v3.props",
+      "PackagePath": "buildTransitive\\Wil_v3.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

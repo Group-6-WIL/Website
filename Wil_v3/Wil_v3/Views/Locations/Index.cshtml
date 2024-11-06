@@ -1,0 +1,158 @@
+﻿@model IEnumerable<Wil_v3.Models.Location>
+
+@{
+    ViewData["Title"] = "Locations";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Ladybird Foundation</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WIL_V1.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #e03c31;
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            font-family: Candara, sans-serif;
+        }
+
+        .location-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 20px;
+            position: relative;
+            z-index: 1; /* Ensure the content is above the background dots */
+            border-radius: 8px; /* Optional: rounded corners */
+        }
+
+        .location-header {
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em; /* Increased font size */
+            margin-bottom: 20px;
+            position: relative;
+            height: 150px;
+        }
+
+      
+
+        .location-map {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .map-heading {
+            font-family: Candara, sans-serif; /* Apply the Candara font */
+            color: white; /* Change heading color if needed */
+            margin-bottom: 20px;
+        }
+
+        .location-table {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 6.0); /* Slightly transparent background */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Add padding inside the card */
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ladybug-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .dot {
+            position: absolute;
+            width: 15vw; /* Adjust the size of the dots relative to viewport */
+            height: 15vw; /* Adjust the size of the dots relative to viewport */
+            background-color: #000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ladybug-pattern">
+        <div class="dot" style="top: 5%; left: 5%;"></div>
+        <div class="dot" style="top: 10%; left: 85%;"></div>
+        <div class="dot" style="top: 30%; left: 30%;"></div>
+        <div class="dot" style="top: 20%; left: 55%;"></div>
+        <div class="dot" style="top: 75%; left: 70%;"></div>
+        <div class="dot" style="top: 85%; left: 15%;"></div>
+    </div>
+
+
+    <div class="location-page">
+        <div class="location-header">
+            <h1 class="map-heading" style=" font-family:Candara; color: black">Donation Sites</h1>
+                    </div>
+@* 
+        <div class="location-map">
+            
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.508087588033!2d30.746048415085235!3d-29.775327481976897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7aa2c79f7d0a3%3A0x8d531769709924b1!2sCity%20Hill%20Church!5e0!3m2!1sen!2sza!4v1628862274632!5m2!1sen!2sza"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+        </div>
+ *@
+        <div class="location-table" >
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.addressName</td>
+                            <td>
+                                <a href="https://www.google.com/maps/search/?api=1&query=@Uri.EscapeDataString(item.address)" target="_blank">
+                                    @item.address
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Include jQuery, Popper.js, and Bootstrap's JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Ensure dropdown is properly initialized -->
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\reesa\\Wil_v3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|c:\\users\\reesa\\wil_v3\\wil_v3\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|solutionrelative:wil_v3\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|c:\\users\\reesa\\wil_v3\\wil_v3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|solutionrelative:wil_v3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|c:\\users\\reesa\\wil_v3\\wil_v3\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|solutionrelative:wil_v3\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|c:\\users\\reesa\\wil_v3\\wil_v3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0DFADBC1-12BF-49B4-828E-3DBF4D17F8B4}|Wil_v3\\Wil_v3.csproj|solutionrelative:wil_v3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Wil_v3\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Wil_v3\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T15:25:46.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\Program.cs",
+              "RelativeDocumentMoniker": "Wil_v3\\Program.cs",
+              "ToolTip": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\Program.cs",
+              "RelativeToolTip": "Wil_v3\\Program.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAACgAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T15:17:39.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\appsettings.json",
+              "RelativeDocumentMoniker": "Wil_v3\\appsettings.json",
+              "ToolTip": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\appsettings.json",
+              "RelativeToolTip": "Wil_v3\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-13T14:28:27.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Wil_v3\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\reesa\\Wil_v3\\Wil_v3\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Wil_v3\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAAAFcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T14:14:49.66Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

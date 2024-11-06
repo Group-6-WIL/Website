@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Wil_v3.props" />
+</Project>

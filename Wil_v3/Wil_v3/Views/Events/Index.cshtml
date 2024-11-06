@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Wil_v3.Models.Events>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Candara', sans-serif; /* Modern font */
+        }
+
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-img-top {
+            max-height: 200px; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-red {
+            background-color: red;
+            color: white;
+        }
+
+            .btn-red:hover {
+                background-color: darkred;
+            }
+
+        .btn-search {
+            background-color: red;
+            color: white;
+        }
+
+            .btn-search:hover {
+                background-color: darkred;
+            }
+
+        .search-form {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-input {
+            width: 100%;
+            border-radius: 0;
+            border-right: 0;
+        }
+
+        .search-button {
+            border-radius: 0;
+            border-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Events</h1>
+
+        <!-- Search Form -->
+        <form method="get" action="@Url.Action("Index")" class="search-form">
+            <div class="input-group">
+                <input type="date" name="searchDate" class="form-control search-input" />
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-search search-button">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            @if (Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="@(item.imageUrl ?? Url.Content("~/images/default.png"))" class="card-img-top" alt="@item.eventName" />
+                            <div class="card-body">
+                                <h5 class="card-title">@item.eventName</h5>
+                                <p class="card-text">
+                                    <small class="text-muted">Date: @item.date.ToString("d MMM yyyy")</small>
+                                </p>
+                                <p class="card-text">@item.description</p>
+                                <!-- More Info Button -->
+                               @*  <a href="@Url.Action("Details", "Events", new { id = item.eventId })" class="btn btn-red">More Info</a> *@
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12">
+                    <div class="alert alert-warning text-center">
+                        No events found.
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
