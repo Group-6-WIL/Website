@@ -1,0 +1,44 @@
+name: ASP.NET MVC CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up .NET environment
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0' # Specify the .NET version your project uses
+
+      # Restore NuGet packages
+      - name: Restore NuGet Packages
+        run: dotnet restore
+
+      # Build the project
+      - name: Build the Project
+        run: dotnet build --configuration Release
+
+      # Run Tests
+      - name: Run Tests
+        run: dotnet test --no-build --verbosity normal
+
+      # Publish Build Artifacts (Optional)
+      - name: Publish Artifacts
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: aspnet-mvc-build
+          path: bin/Release/net6.0
