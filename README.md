@@ -1,5 +1,3 @@
-Here’s the updated README.md file considering Firebase as the backend and the hosted website:
-
 The Ladybird Foundation Website
 
 This is a responsive and dynamic website for The Ladybird Foundation, built using ASP.NET MVC in Visual Studio, styled with Bootstrap, and powered by Firebase for backend services. The website provides users with information about the organization, including banking details, events, team members, and an admin dashboard for managing content dynamically.
